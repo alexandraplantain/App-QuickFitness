@@ -25,7 +25,7 @@ namespace QuickFitness
         public User_train(User us)
         {
             InitializeComponent();
-
+            user = us;
             var panel = new StackPanel();
             using (TrainingContext db = new TrainingContext())
             {

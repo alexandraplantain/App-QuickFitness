@@ -19,18 +19,18 @@ namespace QuickFitness
     /// </summary>
     public partial class MainTrainWin : Window
     {
-       public User user;
+        public User user;
         public MainTrainWin(User us)
         {
             InitializeComponent();
 
             user = us;
-           
-           using(UserContext db = new UserContext())
+
+            using (UserContext db = new UserContext())
             {
                 db.Users.Load();
                 var list = db.Users.Local.ToBindingList();
-                foreach(var itme in list)
+                foreach (var itme in list)
                 {
                     if (itme.Login == us.Login)
                     {
@@ -40,12 +40,14 @@ namespace QuickFitness
                 }
 
             }
+            All_train win_all = new All_train(user);
+            this.Main_Frame.Navigate(win_all);
 
         }
 
-        
 
-        
+
+
         private void Button_Click_Close(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -65,8 +67,8 @@ namespace QuickFitness
 
         private void Button_Click_Open_user_train(object sender, RoutedEventArgs e)
         {
-            
-           MainTrainWin win_main = new MainTrainWin(user);
+
+            MainTrainWin win_main = new MainTrainWin(user);
             win_main = this;
 
             User_train win_user = new User_train(user);
@@ -76,8 +78,8 @@ namespace QuickFitness
 
         private void Button_Click_Open_groupe_train(object sender, RoutedEventArgs e)
         {
-             Groupe_train win_gr = new Groupe_train(user);
-            
+            Groupe_train win_gr = new Groupe_train(user);
+
             this.Main_Frame.Navigate(win_gr);
         }
 
@@ -85,11 +87,11 @@ namespace QuickFitness
         {
             var win_creat = new DoubleWin(user);
             win_creat.Choose_frame(1);
-            
+
             win_creat.Show();
-            
+
             this.Close();
-            
+
         }
 
         private void Button_Another_User(object sender, RoutedEventArgs e)
@@ -129,16 +131,16 @@ namespace QuickFitness
         bool flag2 = true;
         private void Button_Click_Update(object sender, RoutedEventArgs e)
         {
-            
+
             if (flag2)
             {
                 this.Weight.Visibility = Visibility.Hidden;
                 this.Add_weight.Visibility = Visibility.Visible;
                 this.Button_update.Content = "Сохранить";
                 flag2 = false;
-                
-                
-               
+
+
+
             }
             else
             {
@@ -152,14 +154,14 @@ namespace QuickFitness
 
         private void Open_train_MouseEnter(object sender, MouseEventArgs e)
         {
-            
-                this.Open_all_train.Visibility = Visibility.Visible;
-                this.Open_groupr_train.Visibility = Visibility.Visible;
-                this.Open_user_train.Visibility = Visibility.Visible;
-                this.Create_new_train.Visibility = Visibility.Visible;
-           
-               
-            
+
+            this.Open_all_train.Visibility = Visibility.Visible;
+            this.Open_groupr_train.Visibility = Visibility.Visible;
+            this.Open_user_train.Visibility = Visibility.Visible;
+            this.Create_new_train.Visibility = Visibility.Visible;
+
+
+
         }
 
         private void Open_train_MouseLeave(object sender, MouseEventArgs e)

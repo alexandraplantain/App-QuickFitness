@@ -151,7 +151,8 @@ namespace QuickFitness
             }
 
 
-            var win_on = new Training_On(user, train, array_ex);
+            var win_on = new Training_On(user, train, array_ex, kl);
+            
             win_on.Show();
             this.Close();
         }

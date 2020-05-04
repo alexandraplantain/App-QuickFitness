@@ -72,7 +72,7 @@ namespace QuickFitness
                 var list = db.Trainings.Local.ToBindingList();
                 foreach (var item in list)
                 {
-                    if (item.Groupe == 1)
+                    if (item.Groupe == 1 && item.ID_type == 0)
                     {
                         var a = new TrainBlock(item, user);
                         panel.Children.Add(a);
@@ -106,7 +106,7 @@ namespace QuickFitness
                 var list = db.Trainings.Local.ToBindingList();
                 foreach (var item in list)
                 {
-                    if (item.Groupe == 2)
+                    if (item.Groupe == 2 && item.ID_type == 0)
                     {
                         var a = new TrainBlock(item, user);
                         panel.Children.Add(a);
@@ -138,7 +138,7 @@ namespace QuickFitness
                 var list = db.Trainings.Local.ToBindingList();
                 foreach (var item in list)
                 {
-                    if (item.Groupe == 3)
+                    if (item.Groupe == 3 && item.ID_type == 0)
                     {
                         var a = new TrainBlock(item, user);
                         panel.Children.Add(a);
@@ -171,7 +171,7 @@ namespace QuickFitness
                 var list = db.Trainings.Local.ToBindingList();
                 foreach (var item in list)
                 {
-                    if (item.Groupe == 4)
+                    if (item.Groupe == 4 && item.ID_type==0)
                     {
                         var a = new TrainBlock(item, user);
                         panel.Children.Add(a);

@@ -20,7 +20,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="4" Margin="0,97,0,0" VerticalAlignment="Top" Width="301" Fill="#FF333333"/>
-        <TextBlock x:Name="Name_user" HorizontalAlignment="Left" Height="47" Text="Имя" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" Margin="40,32,0,0" Foreground="Black" FontFamily="NEXT ART" FontWeight="Bold" FontSize="36" TextAlignment="Center"/>
+        <TextBlock x:Name="Name_user" HorizontalAlignment="Left" Height="47" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" Margin="40,32,0,0" Foreground="Black" FontFamily="NEXT ART" FontWeight="Bold" FontSize="36" TextAlignment="Center"/>
         <Button Content="МОЯ статистика" Width="278" Height="65" Click="Button_Click_Open_statistics" Style="{DynamicResource BorderlessButton_main}" Background="#FFDEDEDE" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="10,142,996,607"/>
         <Button Content="ВСЕ УПРАЖНЕНИЯ" Width="278" Click="Button_Click_All_Ex" Height="65" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Background="#FFDEDEDE" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="10,225,996,524"/>
         <Button Content="СМЕНИТЬ ПРОФИЛЬ" Width="284" Height="79" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Click="Button_Another_User" Background="#FF5B5B5B" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="8,0,0,12" Foreground="#FFDEDEDE" VerticalAlignment="Bottom" HorizontalAlignment="Left" Panel.ZIndex="10"/>

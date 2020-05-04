@@ -23,12 +23,14 @@ namespace QuickFitness
         Exercise [] array_ex;
         Training train;
         User user;
-        public Training_On(User us, Training tr, Exercise[] array)
+        int kol;//общее кол-во итераций то есть и упр и отдых
+        public Training_On(User us, Training tr, Exercise[] array, int i)
         {
             InitializeComponent();
             train = tr;
             array_ex = array;
             user = us;
+            kol = i;
         }
 
         private void Button_Click_Close(object sender, RoutedEventArgs e)
@@ -95,10 +97,12 @@ namespace QuickFitness
                 win.Show();
             }
         }
+        
+        
 
         int increment = 0;
-        int kol = 5;//общее кол-во итераций то есть и упр и отдых
-        int time_ex = 10;
+        
+        int time_ex;
         int time_rest = 15;
         bool flag1 = false;
         bool flag2 = false;

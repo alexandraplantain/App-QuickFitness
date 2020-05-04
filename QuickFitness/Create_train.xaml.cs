@@ -275,6 +275,11 @@ namespace QuickFitness
                     time_ex_all = time_ex_all + item.Time;
                 }
             }
+            
+            if(list_ex_id.Count>1 )
+            {
+                time_ex_all = time_ex_all + 15;
+            }
             Show_min(time_ex_all);
             this.Time.Text = time_min + " мин";
 
@@ -298,6 +303,10 @@ namespace QuickFitness
                     time_ex_all = time_ex_all - item.Time;
                 }
             }
+            if(time_ex_all>1)
+            {
+                time_ex_all = time_ex_all - 15;
+            }
             Show_min(time_ex_all);
             this.Time.Text = time_min + " мин";
 
@@ -319,6 +328,11 @@ namespace QuickFitness
                 Training new_train = new Training { Name_training = this.new_name.Text, Description = this.new_Disc.Text, Groupe = type_train, ID_training = 1, ID_type = user.ID_user, Img = "dvfd", Intensity = Intensity_num, Time = time_ex_all };
                 db.Trainings.Add(new_train);
                 db.SaveChanges();
+                
+            }
+            using(TrainingContext db = new TrainingContext())
+            {
+                db.Trainings.Load();
                 var list = db.Trainings.Local.ToBindingList();
                 id_train = list.Count;
             }

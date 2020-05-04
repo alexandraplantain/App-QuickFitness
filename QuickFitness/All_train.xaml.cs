@@ -32,8 +32,11 @@ namespace QuickFitness
                 var list = db.Trainings.Local.ToBindingList();
                 foreach (var item in list)
                 {
-                    var a = new TrainBlock(item, us);
-                    panel.Children.Add(a);
+                    if (item.ID_type == 0)
+                    {
+                        var a = new TrainBlock(item, us);
+                        panel.Children.Add(a);
+                    }
                 }
                 this.List_train.Content = panel;
 
