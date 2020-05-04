@@ -225,6 +225,25 @@ namespace QuickFitness
                 panel.Children.Add(a);
             }
             this.List_train.Content = panel;
+
+            this.Groupe_1.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+            this.Groupe_1.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
+            this.Groupe_2.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+            this.Groupe_2.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
+            this.Groupe_3.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+            this.Groupe_3.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
+            this.Groupe_4.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+            this.Groupe_4.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
+            this.Button_intens_one.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+            this.Button_intens_two.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+            this.Button_intens_three.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+
+            Groupe_num = 0;
+            Intensity_num = 0;
         }
 
 
