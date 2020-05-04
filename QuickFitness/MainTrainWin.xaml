@@ -1,0 +1,47 @@
+﻿<Window x:Class="QuickFitness.MainTrainWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickFitness"
+        mc:Ignorable="d"
+        Title="MainTrainWin" Height="830" Width="1284" Window.ResizeMode = "NoResize" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen" Foreground="{x:Null}" HorizontalAlignment="Center">
+    <Window.Background>
+        <ImageBrush ImageSource="basic_back_2.png"/>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="background_basic.png"/>
+        </Grid.Background>
+
+        <Rectangle HorizontalAlignment="Left" Height="814" VerticalAlignment="Center" Width="301" d:IsLocked="True">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="grad_block.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="0,97,0,0" VerticalAlignment="Top" Width="301" Fill="#FF333333"/>
+        <TextBlock x:Name="Name_user" HorizontalAlignment="Left" Height="47" Text="Имя" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" Margin="40,32,0,0" Foreground="Black" FontFamily="NEXT ART" FontWeight="Bold" FontSize="36" TextAlignment="Center"/>
+        <Button Content="МОЯ статистика" Width="278" Height="65" Click="Button_Click_Open_statistics" Style="{DynamicResource BorderlessButton_main}" Background="#FFDEDEDE" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="10,142,996,607"/>
+        <Button Content="ВСЕ УПРАЖНЕНИЯ" Width="278" Click="Button_Click_All_Ex" Height="65" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Background="#FFDEDEDE" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="10,225,996,524"/>
+        <Button Content="СМЕНИТЬ ПРОФИЛЬ" Width="284" Height="79" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Click="Button_Another_User" Background="#FF5B5B5B" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="8,0,0,12" Foreground="#FFDEDEDE" VerticalAlignment="Bottom" HorizontalAlignment="Left" Panel.ZIndex="10"/>
+        <Button x:Name="button_close"  Width="30" HorizontalAlignment="Right" Height="30" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
+            <Button.Background>
+                <ImageBrush ImageSource="button_close.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="215" Margin="40,399,0,0" VerticalAlignment="Top" Width="222" RadiusX="10" RadiusY="10" Fill="#FFDEDEDE"/>
+        <Label Content="текущий вес" HorizontalAlignment="Left" Margin="70,422,0,0" VerticalAlignment="Top" Width="162" Height="33" Background="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20"/>
+        <TextBlock x:Name="Weight" HorizontalAlignment="Left" Visibility="Visible" Margin="62,465,0,0" Text="00,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="184" Height="70" FontFamily="NEXT ART" FontSize="68" Foreground="#FFFE5F1B" FontWeight="Bold"/>
+        <Button Content="обновить" x:Name="Button_update" Width="145" Height="40" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Background="#FF434343" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="18" Margin="78,552,0,0" Foreground="#FFE6E6E6" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click_Update"/>
+        <TextBox x:Name="Add_weight" HorizontalAlignment="Left" Margin="60,468,0,0" Visibility="Hidden" Style="{DynamicResource TextBoxStyle_round}" Text="00,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Background="{x:Null}" BorderBrush="{x:Null}" Height="59" FontFamily="NEXT ART" FontWeight="Bold" FontSize="68" Foreground="#FFC54610" SelectionBrush="#FFF9FFB8" SelectionTextBrush="#FFFE5F1B"/>
+        <Frame x:Name="Main_Frame" Content="" Width="983" Height="730" NavigationUIVisibility="Hidden" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+        <Button Content="ТРЕНИРОВКИ" x:Name="Open_train" Width="278" Height="65" MouseLeave="Open_train_MouseLeave" MouseEnter="Open_train_MouseEnter" Click="Button_Click_Open_train" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Background="#FFDEDEDE" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="10,306,996,443"/>
+        <Button Content="ВСЕ ТРЕНИРОВКИ" Visibility="Hidden" x:Name="Open_all_train" Width="254"  MouseLeave="Open_train_MouseLeave" MouseEnter="Open_train_MouseEnter"  Height="65" Style="{DynamicResource ResourceKey=BorderlessButton_train}" Background="#FF333333" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="19" Margin="12,373,994,380" Foreground="#FFDEDEDE" Click="Button_Click_Open_all_train"/>
+        <Button Content="группы мышц" Visibility="Hidden" Click="Button_Click_Open_groupe_train" x:Name="Open_groupr_train" Width="254"  MouseLeave="Open_train_MouseLeave" MouseEnter="Open_train_MouseEnter" Height="65" Style="{DynamicResource ResourceKey=BorderlessButton_train}" Background="#FF333333" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="19" Margin="24,436,1006,316" Foreground="#FFDEDEDE"/>
+        <Button Content="мои тренировки" Visibility="Hidden" x:Name="Open_user_train" Width="254" Click="Button_Click_Open_user_train"  MouseLeave="Open_train_MouseLeave" MouseEnter="Open_train_MouseEnter" Height="65" Style="{DynamicResource ResourceKey=BorderlessButton_train}" Background="#FF333333" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Margin="24,500,1006,252" Foreground="#FFDEDEDE"/>
+        <Button Content="создать тренировку" Click="Button_Click_Create_Train" Visibility="Hidden" x:Name="Create_new_train" Width="254"  MouseLeave="Open_train_MouseLeave" MouseEnter="Open_train_MouseEnter" Height="65" Style="{DynamicResource ResourceKey=BorderlessButton_train}" Background="#FF333333" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontWeight="Bold" FontSize="19" Margin="24,564,1006,188" Foreground="#FFDEDEDE"/>
+
+
+
+    </Grid>
+</Window>

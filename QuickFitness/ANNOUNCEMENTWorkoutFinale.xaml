@@ -1,0 +1,26 @@
+﻿<Window x:Class="QuickFitness.ANNOUNCEMENTWorkoutFinale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickFitness"
+        mc:Ignorable="d"
+        Title="ANNOUNCEMENTWorkoutFinale" Height="469.9" Width="700" Window.ResizeMode = "NoResize" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FF252525">
+        <Label Content="поздравляем" HorizontalAlignment="Center" Height="74" VerticalAlignment="Top" Width="543" Foreground="#FFFF5C16" FontFamily="NEXT ART" FontSize="64" FontWeight="Bold" Margin="0,97,0,0"/>
+        <Button x:Name="button_close"  Width="50" HorizontalAlignment="Right" Height="50"  Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{x:Null}" Click="Button_Click_Close">
+            <Button.Background>
+                <ImageBrush ImageSource="button_close.png"/>
+            </Button.Background>
+
+
+        </Button>
+        <Label Content="сегодня был последний" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="495" Foreground="White" FontFamily="NEXT ART" FontSize="32" FontWeight="Bold" Margin="0,185,0,0"/>
+        <Label Content="день этой тренировки" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="440" Foreground="White" FontFamily="NEXT ART" FontSize="32" FontWeight="Bold" Margin="0,227,0,0"/>
+        <Label Content="при нажатии кнопки &quot;Начать&quot;" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="342" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,292,0,0"/>
+        <Label Content="весь прогресс обнулится и вы" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="345" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,320,0,0"/>
+        <Label Content="сможете начать заново" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="275" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,348,0,0"/>
+
+    </Grid>
+</Window>
