@@ -16,7 +16,7 @@
             <Ellipse x:Name="Int1" HorizontalAlignment="Left" Height="17" Margin="517,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17"/>
             <Ellipse x:Name="Int2" HorizontalAlignment="Left" Height="17" Margin="543,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17"/>
             <Ellipse x:Name="Int3" HorizontalAlignment="Left" Height="17" Margin="569,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17"/>
-            <Button x:Name="Button_learn" Content="Изучить" Style="{DynamicResource BorderlessButton_main}" HorizontalAlignment="Left" Height="31" Margin="468,82,0,0" VerticalAlignment="Top" Width="124" Background="#FF434343" Foreground="#FFE6E6E6" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontSize="16" FontWeight="Bold"/>
+            <Button x:Name="Button_learn" Click="Button_learn_Click" Content="Изучить" Style="{DynamicResource BorderlessButton_main}" HorizontalAlignment="Left" Height="31" Margin="468,82,0,0" VerticalAlignment="Top" Width="124" Background="#FF434343" Foreground="#FFE6E6E6" BorderBrush="{x:Null}" FontFamily="NEXT ART" FontSize="16" FontWeight="Bold"/>
 
         </Grid>
     </Grid>

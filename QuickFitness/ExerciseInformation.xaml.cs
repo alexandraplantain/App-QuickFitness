@@ -21,13 +21,14 @@ namespace QuickFitness
     /// </summary>
     /// 
 
+    
     public partial class ExerciseInformation : Page
     {
 
         public ExerciseInformation()
         {
             InitializeComponent();
-
+            
             var panel = new StackPanel();
             using (ExerciseContext db = new ExerciseContext())
             {
@@ -35,7 +36,7 @@ namespace QuickFitness
                 var list = db.Exercises.Local.ToBindingList();
                 foreach (var item in list)
                 {
-                    var a = new Exercise_block_learn(item);
+                    var a = new Exercise_block_learn(item, this);
                     panel.Children.Add(a);
 
                 }
@@ -219,9 +220,11 @@ namespace QuickFitness
 
             }
 
+            
             foreach (var item in search)
             {
-                var a = new Exercise_block_learn(item);
+                var a = new Exercise_block_learn(item, this);
+               
                 panel.Children.Add(a);
             }
             this.List_train.Content = panel;
