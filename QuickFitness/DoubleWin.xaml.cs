@@ -42,7 +42,7 @@ namespace QuickFitness
         {
             if (choose_win == i)
             {
-                this.Main_Frame.Navigate(new Create_train(user));
+                this.Main_Frame.Navigate(new Create_train(user, this));
             }
             else
             {

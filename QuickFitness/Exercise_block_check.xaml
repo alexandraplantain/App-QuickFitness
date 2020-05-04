@@ -60,12 +60,12 @@
     <Grid  Margin="6,0,0,0">
         <Rectangle HorizontalAlignment="Center" Height="130" VerticalAlignment="Center" Width="628" Fill="#FF333333" Stroke="#FF434343" StrokeThickness="6"/>
 
-        <TextBlock HorizontalAlignment="Left" Height="27" Margin="8,20,0,0" Text="Название упражнения" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" FontFamily="NEXT ART" FontWeight="Bold" FontSize="24" Foreground="#FFE6E6E6"/>
-        <TextBlock HorizontalAlignment="Left" Height="27" Margin="8,48,0,0" Text="группа" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" FontFamily="NEXT ART" FontWeight="Bold" FontSize="24" Foreground="#FFE6E6E6"/>
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="8,83,0,0" Text="01:00 мин" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Foreground="#FFFE5F1B"/>
-        <Ellipse HorizontalAlignment="Left" Height="17" Margin="372,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17" Fill="#FFFE5F1B"/>
-        <Ellipse HorizontalAlignment="Left" Height="17" Margin="399,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17" Fill="#FFFE5F1B"/>
-        <Ellipse HorizontalAlignment="Left" Height="17" Margin="424,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17" Fill="#FFFE5F1B"/>
+        <TextBlock x:Name="Name_ex" HorizontalAlignment="Left" Height="27" Margin="8,20,0,0" Text="Название упражнения" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" FontFamily="NEXT ART" FontWeight="Bold" FontSize="24" Foreground="#FFE6E6E6"/>
+        <TextBlock x:Name="Groupe" HorizontalAlignment="Left" Height="27" Margin="8,48,0,0" Text="группа" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" FontFamily="NEXT ART" FontWeight="Bold" FontSize="24" Foreground="#FFE6E6E6"/>
+        <TextBlock x:Name="Time_ex" HorizontalAlignment="Left" Height="18" Margin="8,83,0,0" Text="01:00 мин" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" FontFamily="NEXT ART" FontWeight="Bold" FontSize="20" Foreground="#FFFE5F1B"/>
+        <Ellipse x:Name="Int_1" HorizontalAlignment="Left" Height="17" Margin="372,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17" />
+        <Ellipse x:Name="Int_2" HorizontalAlignment="Left" Height="17" Margin="399,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17" />
+        <Ellipse x:Name="Int_3" HorizontalAlignment="Left" Height="17" Margin="424,25,0,0" Stroke="#FFDEDEDE" VerticalAlignment="Top" Width="17" />
         <Button Style="{DynamicResource ButtonStyle_Check}" Content=""  HorizontalAlignment="Right" Height="45" Margin="0,0,20,0" x:Name="Button_Check" Click="Button_Check_Click" VerticalAlignment="Center" Width="45" Background="#FF333333" BorderBrush="#FFFE5F1B" Cursor="Hand"/>
 
     </Grid>

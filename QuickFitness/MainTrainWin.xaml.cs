@@ -85,7 +85,9 @@ namespace QuickFitness
         {
             var win_creat = new DoubleWin(user);
             win_creat.Choose_frame(1);
+            
             win_creat.Show();
+            
             this.Close();
             
         }
