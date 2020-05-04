@@ -19,7 +19,6 @@ namespace QuickFitness
     /// </summary>
     /// 
 
-
     public partial class chose_login : Window
     {
         public chose_login()
@@ -31,8 +30,6 @@ namespace QuickFitness
         {
             this.Close();
         }
-
-
 
         private void Button_Made_new_login(object sender, RoutedEventArgs e)
         {
@@ -50,36 +47,43 @@ namespace QuickFitness
         {
             using (UserContext db = new UserContext())
             {
-
                 db.Users.Load();
                 var list = db.Users.Local.ToBindingList();
-               
+                bool flag1 = false;
+                bool flag2 = false;
                 foreach (var itme in list)
                 {
-
-                    if(itme.Login==this.input_login.Text)
+                    if (itme.Login == this.input_login.Text)
                     {
-                        if(itme.Password==this.input_password.Password)
-                        {
-                            var user = itme;
-                            var win_main = new MainTrainWin(user);
-                            win_main.Show();
-                            db.Dispose();
-                            this.Close();
-
-                        }
-                        else
-                        {
-                            this.Error_not_match.Visibility = Visibility.Visible;
-                        }
-
+                        flag1 = true;
                     }
                     else
                     {
                         this.Error_not_log.Visibility = Visibility.Visible;
                     }
-                }
 
+                    if (flag1)
+                    {
+                        if (itme.Password == this.input_password.Password)
+                        {
+                            flag2 = true;
+                        }
+                        else
+                        {
+                            this.Error_not_match.Visibility = Visibility.Visible;
+                        }
+                    }
+
+                    if (flag1 && flag2)
+                    {
+                        var user = itme;
+                        var win_main = new MainTrainWin(user);
+                        win_main.Show();
+                        db.Dispose();
+                        this.Close();
+                        flag1 = flag2 = false;
+                    }
+                }
             }
         }
     }

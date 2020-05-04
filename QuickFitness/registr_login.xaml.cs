@@ -43,11 +43,12 @@ namespace QuickFitness
         public bool flag = true;
         public bool flag2 = true;
         public bool flag3 = true;
+        public bool flag4 = true;
         User new_user;
 
         private void Button_Click_Return_Regist(object sender, RoutedEventArgs e)
         {
-            if (progress_bar_step == 2)
+            if (progress_bar_step == 2 || flag4)
             {
                 chose_login win = new chose_login();
                 win.Show();
@@ -63,11 +64,7 @@ namespace QuickFitness
 
         private void Button_Click_Next_Regist(object sender, RoutedEventArgs e)
         {
-            if (flag)
-            {
-                progress_bar_step++;
-                flag = false;
-            }
+            
 
             if (flag2)
             {
@@ -85,7 +82,17 @@ namespace QuickFitness
                         }
                         else
                         {
-                            flag2 = false;
+                            if (this.new_login.Text == "")
+                            {
+                                var win_a = new ERRORWin();
+                                win_a.ChooseError("ERRORDataEntry");
+                                win_a.Show();
+                                break;
+                            }
+                            else
+                            {
+                                flag2 = false;
+                            }
                         }
                     }
 
@@ -111,7 +118,13 @@ namespace QuickFitness
                 }
                 else
                 {
+                    if (flag)
+                    {
+                        progress_bar_step++;
+                        flag = false;
+                    }
 
+                    flag4 = false;
                     switch (progress_bar_step)
                     {
                         case 1:
