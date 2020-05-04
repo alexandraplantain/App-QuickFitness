@@ -70,7 +70,9 @@ namespace QuickFitness
                         panel.Children.Add(a);
                     }
                 }
+                this.List_train.Content = panel;
             }
+            
 
         }
 
@@ -101,7 +103,9 @@ namespace QuickFitness
                         panel.Children.Add(a);
                     }
                 }
+                this.List_train.Content = panel;
             }
+            
         }
 
         private void Groupe_3_Click(object sender, RoutedEventArgs e)
@@ -131,7 +135,9 @@ namespace QuickFitness
                         panel.Children.Add(a);
                     }
                 }
+                this.List_train.Content = panel;
             }
+            
         }
 
         private void Groupe_4_Click(object sender, RoutedEventArgs e)
@@ -161,7 +167,9 @@ namespace QuickFitness
                         panel.Children.Add(a);
                     }
                 }
+                this.List_train.Content = panel;
             }
+            
         }
 
 
