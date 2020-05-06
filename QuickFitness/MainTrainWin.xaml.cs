@@ -138,7 +138,7 @@ namespace QuickFitness
                 this.Add_weight.Visibility = Visibility.Visible;
                 this.Button_update.Content = "Сохранить";
                 flag2 = false;
-
+                
 
 
             }
@@ -149,6 +149,8 @@ namespace QuickFitness
                 this.Weight.Text = this.Add_weight.Text;
                 this.Button_update.Content = "Обновить";
                 flag2 = true;
+                var win_stat = new Statistics_train(user);
+                this.Main_Frame.Navigate(win_stat);
             }
         }
 

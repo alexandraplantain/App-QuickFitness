@@ -136,6 +136,20 @@ namespace QuickFitness
             this.Kol_ex_stat.Text = kol_ex.ToString();
             this.Kol_train_stat.Text = kol_train.ToString();
             this.Kol_update_stat.Text = weight_up.ToString();
+         //   Progres_weight();
+        }
+
+
+        private void Progres_weight()
+        {
+            if (Convert.ToDouble( user.Weight_goal) >= Convert.ToDouble(weight))
+            {
+                this.Progress.Value = 100;
+            }
+            else
+            {
+                this.Progress.Value = ((Convert.ToDouble(weight)) / (Convert.ToDouble(user.Weight_goal))) * 100;
+            }
         }
 
         private void Take_time()

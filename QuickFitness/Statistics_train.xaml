@@ -43,7 +43,7 @@
         <Rectangle HorizontalAlignment="Left" Height="25" Margin="459,549,0,0" VerticalAlignment="Top" Width="25" Fill="#FFFA9C14"/>
         <Label Content="Пресс" HorizontalAlignment="Left" Margin="492,546,0,0" VerticalAlignment="Top" Width="164" FontFamily="NEXT ART" FontWeight="Bold" Foreground="#FFDEDEDE" FontSize="16"/>
         <Ellipse Visibility="Hidden" x:Name="Back_pie" HorizontalAlignment="Left" Height="340" Margin="44,326,0,0" VerticalAlignment="Top" Width="340" Fill="#FFA0A0A0"/>
-        <ProgressBar HorizontalAlignment="Right" Height="22" Margin="0,0,68,223" VerticalAlignment="Bottom" Width="309" RenderTransformOrigin="0.5,0.5" Value="65" Background="{x:Null}">
+        <ProgressBar x:Name="Progress" HorizontalAlignment="Right" Height="22" Margin="0,0,68,223" VerticalAlignment="Bottom" Width="309" RenderTransformOrigin="0.5,0.5" Value="65" Background="{x:Null}">
             <ProgressBar.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
