@@ -21,9 +21,13 @@ namespace QuickFitness
 
     public partial class chose_login : Window
     {
+       
+
         public chose_login()
         {
+
             InitializeComponent();
+            
         }
 
         private void Button_Click_Close(object sender, RoutedEventArgs e)

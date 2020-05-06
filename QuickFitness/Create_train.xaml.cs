@@ -280,16 +280,14 @@ namespace QuickFitness
             {
                 time_ex_all = time_ex_all + 15;
             }
-            Show_min(time_ex_all);
-            this.Time.Text = time_min + " мин";
+
+            var ts = TimeSpan.FromSeconds(time_ex_all);
+
+            this.Time.Text = ts.Minutes.ToString() + " мин";
 
         }
 
-        private void Show_min(int s)
-        {
-            var result = Math.Round((double)s / 60);
-            time_min = (int)result;
-        }
+        
 
         public void Remove_ex(int i)
         {
@@ -307,8 +305,9 @@ namespace QuickFitness
             {
                 time_ex_all = time_ex_all - 15;
             }
-            Show_min(time_ex_all);
-            this.Time.Text = time_min + " мин";
+            var ts = TimeSpan.FromSeconds(time_ex_all);
+
+            this.Time.Text = ts.Minutes.ToString() + " мин";
 
 
         }
