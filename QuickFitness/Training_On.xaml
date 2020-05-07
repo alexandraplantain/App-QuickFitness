@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuickFitness"
         mc:Ignorable="d"
-        Title="Training_On" Height="830" Width="1284" HorizontalAlignment="Center" WindowStyle="None" Window.ResizeMode = "NoResize" Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen">
+        Title="Training_On" Height="830" Width="1284" KeyDown="Window_KeyDown" HorizontalAlignment="Center" WindowStyle="None" Window.ResizeMode = "NoResize" Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="background_basic.png"/>

@@ -210,7 +210,7 @@ namespace QuickFitness
                     {
                         foreach (var item in list)
                         {
-                            if (item.Intensity == Intensity_num)
+                            if (item.Intensity == Intensity_num && Groupe_num==0)
                             {
                                 search.Add(item);
                             }

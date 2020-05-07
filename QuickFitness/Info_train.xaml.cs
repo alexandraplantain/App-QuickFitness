@@ -24,6 +24,7 @@ namespace QuickFitness
         User user;
         Training train;
         int time;
+        int day=0;
         public Info_train(Training tr, User us)
         {
             InitializeComponent();
@@ -37,13 +38,58 @@ namespace QuickFitness
             this.Train_info.Text = train.Description.ToString();
             ChooseIntensity(train.Intensity);
 
+            using (StaticsticContext db = new StaticsticContext())
+            {
+                db.Staticstics.Load();
+                var list = db.Staticstics.Local.ToBindingList();
+                foreach (var item in list)
+                {
+                    if(item.ID_user==user.ID_user && item.ID_training==train.ID_training)
+                    {
+                        day++;
+                    }
+                }
+            }
 
 
 
-           
-            Fiil_progress(8); //в днях
+                    Fiil_progress(day); //в днях
 
         }
+
+         
+
+        public void Take_Stat()
+        {
+            using (StaticsticContext db = new StaticsticContext())
+            {
+                string weight=null;
+                db.Staticstics.Load();
+                var list = db.Staticstics.Local.ToBindingList();
+                foreach(var item in list)
+                {
+                    if (item.ID_user == user.ID_user)
+                    {
+                        weight = item.Weight_note;                        
+                    }
+                    else
+                    {
+                        weight = user.Weight_start;
+                    }
+                    if (item.ID_user == user.ID_user && item.ID_training == train.ID_training)
+                    {
+                        day++;
+                    }
+                }
+                DateTime data = DateTime.Now;
+                var new_stat = new Staticstic { ID_session = 1, ID_training = train.ID_training, ID_user = user.ID_user, Time = train.Time, Weight_note = weight, Data_traning = data.ToString() };
+                db.Staticstics.Add(new_stat);
+                db.SaveChanges();
+                Fiil_progress(day); //в днях
+
+            }
+        }
+
         private void Show_min(int s)
         {
             var result = Math.Round((double)s / 60);

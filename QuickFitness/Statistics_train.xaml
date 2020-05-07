@@ -27,10 +27,10 @@
         <TextBlock HorizontalAlignment="Left" Height="43" Margin="645,192,0,0" Text="м." TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontFamily="NEXT ART" FontWeight="Bold" FontSize="30" Foreground="#FFDEDEDE" TextAlignment="Center"/>
         <Wpf:PieChart x:Name="Pie_chart_main" IsHitTestVisible="False" HorizontalAlignment="Left" Height="349" Margin="62,322,0,0" VerticalAlignment="Top" Width="349">
             <Wpf:PieChart.Series>
-                <Wpf:PieSeries x:Name="Pie_1"  Values="3" Fill="#FFED7804"  />
-                <Wpf:PieSeries x:Name="Pie_2"  Values="5"   Fill="#FFA82D04"/>
-                <Wpf:PieSeries x:Name="Pie_3"  Values="2"   Fill="#FFE65305"/>
-                <Wpf:PieSeries x:Name="Pie_4"  Values="1"  Fill="#FFFA9C14"/>
+                <Wpf:PieSeries x:Name="Pie_1"  Values="0" Fill="#FFED7804"  />
+                <Wpf:PieSeries x:Name="Pie_2"  Values="0"   Fill="#FFA82D04"/>
+                <Wpf:PieSeries x:Name="Pie_3"  Values="0"   Fill="#FFE65305"/>
+                <Wpf:PieSeries x:Name="Pie_4"  Values="0"  Fill="#FFFA9C14"/>
 
             </Wpf:PieChart.Series>
         </Wpf:PieChart>

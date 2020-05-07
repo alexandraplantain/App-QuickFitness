@@ -43,6 +43,7 @@ namespace QuickFitness
         }
 
         bool flag0 = true;
+
         private void Button_stop_time(object sender, RoutedEventArgs e)
         {
             if (flag0)
@@ -56,6 +57,25 @@ namespace QuickFitness
                 dt.Start();
                 flag0 = true;
                 this.Stop_time.Content = "Остановить таймер";
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                if (flag0)
+                {
+                    dt.Stop();
+                    flag0 = false;
+                    this.Stop_time.Content = "Продолжить";
+                }
+                else
+                {
+                    dt.Start();
+                    flag0 = true;
+                    this.Stop_time.Content = "Остановить таймер";
+                }
             }
         }
 
@@ -93,6 +113,7 @@ namespace QuickFitness
             else
             {
                 var win = new Info_train(train, user);
+                win.Take_Stat();
                 this.Close();
                 win.Show();
             }
@@ -167,5 +188,7 @@ namespace QuickFitness
             win.Show();
             this.Close();
         }
+
+       
     }
 }

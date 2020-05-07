@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using QuickFitness.Models;
 using System.Data.Entity;
+using System.Text.RegularExpressions;
 
 namespace QuickFitness
 {
@@ -139,18 +140,61 @@ namespace QuickFitness
                 this.Button_update.Content = "Сохранить";
                 flag2 = false;
                 
-
+                
 
             }
             else
             {
                 this.Weight.Visibility = Visibility.Visible;
                 this.Add_weight.Visibility = Visibility.Hidden;
+                Regex reg = new Regex(@"^[0-9]*[.,]?[0-9]+$");
+                MatchCollection matches = reg.Matches(this.Add_weight.Text);
+                if(matches.Count>0)
+                {
+
+                
+
                 this.Weight.Text = this.Add_weight.Text;
                 this.Button_update.Content = "Обновить";
+                    this.Add_weight.Text = "00,0";
                 flag2 = true;
+
+                using (StaticsticContext db = new StaticsticContext())
+                {
+                    db.Staticstics.Load();
+                    var list = db.Staticstics.Local.ToBindingList();
+                    int key=0;
+                    foreach(var item in list)
+                    {
+                        
+                        if(item.ID_user==user.ID_user)
+                        {
+                            key = item.ID_session;
+                        }
+                    }
+                    if(key!=0)
+                    {
+                        var item = db.Staticstics.Find(key);
+                        if(item!=null)
+                        {
+                            item.Weight_note = this.Add_weight.Text;
+                            db.SaveChanges();
+                        }
+                    }
+                }
+
                 var win_stat = new Statistics_train(user);
                 this.Main_Frame.Navigate(win_stat);
+                }
+                else
+                {
+                    this.Button_update.Content = "Обновить";
+                    this.Add_weight.Text = "00,0";
+                    flag2 = true;
+                    var win_a = new ERRORWin();
+                    win_a.ChooseError("ERRORDataEntry");
+                    win_a.Show();
+                }
             }
         }
 

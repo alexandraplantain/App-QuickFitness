@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuickFitness"
         mc:Ignorable="d"
-        Title="chose_login" Height="830" Width="1284" Window.ResizeMode = "NoResize" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen">
+        Title="chose_login" Height="830" Width="1284" KeyDown="Window_KeyDown" Window.ResizeMode = "NoResize" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -28,7 +28,7 @@
                 <SolidColorBrush Color="#F3707070" Opacity="0"/>
             </Button.BorderBrush>
         </Button>
-        <Label Content="ВВЕДИТЕ ВАШ ЛОГИН" Background="{x:Null}" Width="322" Height="44" FontFamily="NEXT ART" FontSize="27" Foreground="White" FontWeight="DemiBold" Margin="484,244,0,526" FontStretch="Medium" HorizontalAlignment="Left"/>
+        <Label Content="ВВЕДИТЕ ВАШ ЛОГИН" Background="{x:Null}" Width="322" Height="44" FontFamily="NEXT ART" FontSize="27" Foreground="White" FontWeight="DemiBold" Margin="484,238,0,532" FontStretch="Medium" HorizontalAlignment="Left"/>
         <Button x:Name="button_close"  Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
             <Button.Background>
                 <ImageBrush ImageSource="button_close.png"/>
@@ -39,11 +39,11 @@
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </TextBox.Foreground>
         </TextBox>
-        <Label Content="ВВЕДИТЕ ВАШ Пароль" Background="{x:Null}" Height="44" FontFamily="NEXT ART" FontSize="27" Foreground="White" FontWeight="DemiBold" Margin="475,404,0,366" FontStretch="Medium" HorizontalAlignment="Left"/>
+        <Label Content="ВВЕДИТЕ ВАШ Пароль" Background="{x:Null}" Height="44" FontFamily="NEXT ART" FontSize="27" Foreground="White" FontWeight="DemiBold" Margin="475,398,0,372" FontStretch="Medium" HorizontalAlignment="Left"/>
         <Label Content="такого логина не существует" x:Name="Error_not_log" Visibility="Hidden" FontFamily="NEXT ART" FontSize="14" Foreground="#FF934545" FontWeight="Bold" Width="266" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="512,367,0,0"/>
         <Label Content="пароль и логин не совпадают" FontFamily="NEXT ART" Visibility="Hidden" x:Name="Error_not_match"  FontSize="14" Foreground="#FF934545" FontWeight="Bold" Width="273" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="509,524,0,0"/>
         <Ellipse HorizontalAlignment="Left" Height="35" Margin="60,46,0,0" VerticalAlignment="Top" Width="35" Fill="#FF434343"/>
-        <Button x:Name="Button_go" Click="Button_go_Click" Content="войти" HorizontalAlignment="Center" Height="40" Margin="0,555,0,0" VerticalAlignment="Top" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Width="265" Background="#FF434343" BorderBrush="{x:Null}" Foreground="#FFFF5C16" FontFamily="NEXT ART" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="Button_go" Click="Button_go_Click" Content="войти" HorizontalAlignment="Center" Height="40" Margin="0,555,0,0" VerticalAlignment="Top" Style="{DynamicResource ResourceKey=BorderlessButton_main}" Width="265" Background="#FF434343" BorderBrush="#FFFF5C16" Foreground="#FFFF5C16" FontFamily="NEXT ART" FontWeight="Bold" FontSize="16" Padding="-2,1,1,1" BorderThickness="1,1,1,1"/>
         <PasswordBox x:Name="input_password" Style="{DynamicResource PassTextBoxStyle_round}" HorizontalAlignment="Left" Margin="436,448,0,0"  VerticalAlignment="Top" Width="419" Height="70" FontFamily="Rubik" FontSize="24" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
             <PasswordBox.Foreground>
                 <SolidColorBrush Color="White" Opacity="0.7"/>

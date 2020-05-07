@@ -27,10 +27,10 @@ namespace QuickFitness
         string weight;
         List<Exercise> list_ex = new List<Exercise>();
         List<Training> list_train = new List<Training>();
-        int kol_ex=0;
+        int kol_ex = 0;
         int kol_train = 0;
         int weight_up = 0;
-        int time=0;
+        int time = 0;
 
 
         public Statistics_train(User us)
@@ -55,7 +55,7 @@ namespace QuickFitness
                 foreach (var item in list)
                 {
                     list_con.Add(item);
-                    
+
                 }
             }
 
@@ -79,27 +79,39 @@ namespace QuickFitness
                 var list = db.Staticstics.Local.ToBindingList();
                 foreach (var item in list)
                 {
-                    if(item.Weight_note!=weight)
-                    {
-                        weight_up++;
-                        weight = item.Weight_note;
-                    }
+
 
                     if (item.ID_user == user.ID_user)
                     {
+                        if (item.Weight_note != weight)
+                        {
+                            weight_up++;
+                            weight = item.Weight_note;
+                        }
+                        bool flag = true;
+                        int id = 0;
                         foreach (var item_con in list_con)
                         {
                             if (item.ID_training == item_con.ID_training)
                             {
-                                foreach(var item_tr in list_train)
+                                if (flag)
                                 {
-                                    if(item_tr.ID_training==item_con.ID_training)
+                                    id = item.ID_training;
+                                    foreach (var item_tr in list_train)
                                     {
-                                        time = time + item_tr.Time;
+                                        if (item_tr.ID_training == item_con.ID_training)
+                                        {
+                                            time = time + item_tr.Time;
+                                        }
                                     }
-                                }
 
-                                kol_train++;
+                                    kol_train++;
+                                    flag = false;
+                                }
+                                if(id!=item.ID_training)
+                                {
+                                    flag = true;
+                                }
                                 foreach (var item_ex in list_ex)
                                 {
                                     int kol_1 = 0;
@@ -136,19 +148,20 @@ namespace QuickFitness
             this.Kol_ex_stat.Text = kol_ex.ToString();
             this.Kol_train_stat.Text = kol_train.ToString();
             this.Kol_update_stat.Text = weight_up.ToString();
-         //   Progres_weight();
+            Take_time();
+            Progres_weight();
         }
 
 
         private void Progres_weight()
         {
-            if (Convert.ToDouble( user.Weight_goal) >= Convert.ToDouble(weight))
+            if (Convert.ToDouble(user.Weight_goal) >= Convert.ToDouble(weight))
             {
                 this.Progress.Value = 100;
             }
             else
             {
-                this.Progress.Value = ((Convert.ToDouble(weight)) / (Convert.ToDouble(user.Weight_goal))) * 100;
+                this.Progress.Value = (   Convert.ToDouble(weight)  - Convert.ToDouble(user.Weight_goal)  ) / (    Convert.ToDouble(user.Weight_start) -  Convert.ToDouble(user.Weight_goal) ) ;
             }
         }
 
@@ -162,16 +175,16 @@ namespace QuickFitness
 
         private void Pie_Stat(int k1, int k2, int k3, int k4)
         {
-            if (k1 == 0 || k2 == 0 || k3 == 0 || k4 == 0)
+            if (k1 == 0 && k2 == 0 && k3 == 0 && k4 == 0)
             {
                 this.Back_pie.Visibility = Visibility.Visible;
             }
             else
             {
-                this.Pie_1.Values = new ChartValues<double> { kol_ex / k1 };
-                this.Pie_2.Values = new ChartValues<double> { kol_ex / k2 };
-                this.Pie_3.Values = new ChartValues<double> { kol_ex / k3 };
-                this.Pie_4.Values = new ChartValues<double> { kol_ex / k4 };
+                this.Pie_1.Values = new ChartValues<double> { k1 };
+                this.Pie_2.Values = new ChartValues<double> { k2 };
+                this.Pie_3.Values = new ChartValues<double> { k3 };
+                this.Pie_4.Values = new ChartValues<double> { k4 };
                 this.Back_pie.Visibility = Visibility.Hidden;
             }
         }

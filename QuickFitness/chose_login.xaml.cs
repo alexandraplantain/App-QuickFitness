@@ -60,10 +60,12 @@ namespace QuickFitness
                     if (itme.Login == this.input_login.Text)
                     {
                         flag1 = true;
+                        this.Error_not_match.Visibility = Visibility.Hidden;
                     }
                     else
                     {
                         this.Error_not_log.Visibility = Visibility.Visible;
+                        this.Error_not_match.Visibility = Visibility.Hidden;
                     }
 
                     if (flag1)
@@ -75,6 +77,7 @@ namespace QuickFitness
                         else
                         {
                             this.Error_not_match.Visibility = Visibility.Visible;
+                            this.Error_not_log.Visibility = Visibility.Hidden;
                         }
                     }
 
@@ -86,6 +89,56 @@ namespace QuickFitness
                         db.Dispose();
                         this.Close();
                         flag1 = flag2 = false;
+                    }
+                }
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key==Key.Enter)
+            {
+                using (UserContext db = new UserContext())
+                {
+                    db.Users.Load();
+                    var list = db.Users.Local.ToBindingList();
+                    bool flag1 = false;
+                    bool flag2 = false;
+                    foreach (var itme in list)
+                    {
+                        if (itme.Login == this.input_login.Text)
+                        {
+                            flag1 = true;
+                            this.Error_not_match.Visibility = Visibility.Hidden;
+                        }
+                        else
+                        {
+                            this.Error_not_log.Visibility = Visibility.Visible;
+                            this.Error_not_match.Visibility = Visibility.Hidden;
+                        }
+
+                        if (flag1)
+                        {
+                            if (itme.Password == this.input_password.Password)
+                            {
+                                flag2 = true;
+                            }
+                            else
+                            {
+                                this.Error_not_match.Visibility = Visibility.Visible;
+                                this.Error_not_log.Visibility = Visibility.Hidden;
+                            }
+                        }
+
+                        if (flag1 && flag2)
+                        {
+                            var user = itme;
+                            var win_main = new MainTrainWin(user);
+                            win_main.Show();
+                            db.Dispose();
+                            this.Close();
+                            flag1 = flag2 = false;
+                        }
                     }
                 }
             }
