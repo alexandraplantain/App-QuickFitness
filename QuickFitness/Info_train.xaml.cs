@@ -33,7 +33,7 @@ namespace QuickFitness
 
             this.Name_train.Text = tr.Name_training.ToString();
             Show_min(tr.Time);
-            this.Img_train.Source = new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic/Training/train.png"));
+            this.Img_train.Source = new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic" + train.Img));
             this.Train_time.Text = time.ToString() + " мин";
             this.Train_info.Text = train.Description.ToString();
             ChooseIntensity(train.Intensity);

@@ -16,7 +16,7 @@
         <Image x:Name="Img_train" HorizontalAlignment="Left" Height="260" Margin="45,144,0,0" VerticalAlignment="Top" Width="600"/>
 
         <Rectangle HorizontalAlignment="Center" Height="95" Margin="0,426,0,0" VerticalAlignment="Top" Width="1284" Fill="#FF434343"/>
-        <TextBlock x:Name="Train_info" HorizontalAlignment="Center" Height="85" Margin="0,436,0,0" Text="Описание" TextWrapping="Wrap" VerticalAlignment="Top" Width="1200" Foreground="White" FontFamily="Rubik" FontSize="20" TextAlignment="Center"/>
+        <TextBlock x:Name="Train_info" HorizontalAlignment="Center" Height="63" Margin="0,445,0,0"  Text="Описание" TextWrapping="Wrap" VerticalAlignment="Top" Width="1200" Foreground="White" FontFamily="Rubik" FontSize="20" TextAlignment="Center"/>
         <Button x:Name="Back_to_choose_login" BorderBrush="{x:Null}" Height="55" Click="Button_go_to_all_train" Margin="25,23,1204,736" Width="55">
             <Button.Background>
                 <ImageBrush ImageSource="button_back.png"/>
@@ -31,7 +31,7 @@
 
 
         </Button>
-        <TextBlock x:Name="Name_train" HorizontalAlignment="Left" Height="170" Margin="82,189,0,0" Text="Нaзвание тренировки" TextWrapping="Wrap" VerticalAlignment="Top" Width="527" FontFamily="NEXT ART" FontSize="50" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="Name_train" HorizontalAlignment="Left" Height="205" Margin="82,172,0,0" Text="Нaзвание тренировки" TextWrapping="Wrap" VerticalAlignment="Top" Width="527" FontFamily="NEXT ART" FontSize="50" FontWeight="Bold" Foreground="White"/>
         <Label Content="Интенсивность" HorizontalAlignment="Left" Margin="673,154,0,0" VerticalAlignment="Top" Width="241" Height="36" FontFamily="NEXT ART" FontSize="22" FontWeight="Bold" Foreground="#FFE6E6E6"/>
         <Label Content="Время тренировки" HorizontalAlignment="Left" Margin="673,223,0,0" VerticalAlignment="Top" Width="277" Height="36" FontFamily="NEXT ART" FontSize="22" FontWeight="Bold" Foreground="#FFE6E6E6"/>
         <TextBlock x:Name="Train_time" HorizontalAlignment="Left" Height="22" Margin="680,264,0,0" Text="20 мин" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="NEXT ART" FontSize="24" Foreground="#FFFE5F1B" FontWeight="Bold"/>
