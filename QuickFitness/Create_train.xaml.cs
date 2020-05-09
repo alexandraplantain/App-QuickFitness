@@ -322,31 +322,40 @@ namespace QuickFitness
         private void Create_Click(object sender, RoutedEventArgs e)
         {
             int id_train;
-            using (TrainingContext db = new TrainingContext())
+            if (Intensity_num != 0 && type_train != 0 && list_ex_id.Count != 0 && this.new_name.Text != "")
             {
-                Training new_train = new Training { Name_training = this.new_name.Text, Description = this.new_Disc.Text, Groupe = type_train, ID_training = 1, ID_type = user.ID_user, Img = "dvfd", Intensity = Intensity_num, Time = time_ex_all };
-                db.Trainings.Add(new_train);
-                db.SaveChanges();
-                
-            }
-            using(TrainingContext db = new TrainingContext())
-            {
-                db.Trainings.Load();
-                var list = db.Trainings.Local.ToBindingList();
-                id_train = list.Count;
-            }
-            using(ConnectionContext db = new ConnectionContext())
-            {
-                foreach (var item in list_ex_id)
+                using (TrainingContext db = new TrainingContext())
                 {
-                    var new_con = new Connection { ID_note = 1, ID_ex = item, ID_training = id_train, };
-                    db.Connections.Add(new_con);
+                    Training new_train = new Training { Name_training = this.new_name.Text, Description = this.new_Disc.Text, Groupe = type_train, ID_training = 1, ID_type = user.ID_user, Img = "/Training/user_training.png", Intensity = Intensity_num, Time = time_ex_all };
+                    db.Trainings.Add(new_train);
+                    db.SaveChanges();
+
                 }
-                db.SaveChanges();
+                using (TrainingContext db = new TrainingContext())
+                {
+                    db.Trainings.Load();
+                    var list = db.Trainings.Local.ToBindingList();
+                    id_train = list.Count;
+                }
+                using (ConnectionContext db = new ConnectionContext())
+                {
+                    foreach (var item in list_ex_id)
+                    {
+                        var new_con = new Connection { ID_note = 1, ID_ex = item, ID_training = id_train };
+                        db.Connections.Add(new_con);
+                    }
+                    db.SaveChanges();
+                }
+                var win_user_train = new MainTrainWin(user);
+                win_user_train.Show();
+                win_c.Close();
             }
-            var win_user_train = new MainTrainWin(user);
-            win_user_train.Show();
-            win_c.Close();
+            else
+            {
+                var win_er = new ERRORWin();
+                win_er.ChooseError("ERRORDataEntry");
+                win_er.Show();
+            }
 
         }
     }

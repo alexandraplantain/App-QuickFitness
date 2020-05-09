@@ -19,6 +19,7 @@
     <None Remove="grad_block.png" />
     <None Remove="im.jpg" />
     <None Remove="Resources\AllPic\Training\train.png" />
+    <None Remove="Resources\AllPic\Training\user_training.png" />
     <None Remove="Resources\logo_main.png" />
     <None Remove="reward.png" />
     <None Remove="reward_win.png" />
@@ -48,6 +49,7 @@
     <Resource Include="grad_block.png" />
     <Resource Include="im.jpg" />
     <Resource Include="Resources\AllPic\Training\train.png" />
+    <Resource Include="Resources\AllPic\Training\user_training.png" />
     <Resource Include="Resources\logo_main.png" />
     <Resource Include="reward.png" />
     <Resource Include="reward_win.png" />

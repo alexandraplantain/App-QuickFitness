@@ -99,6 +99,9 @@ namespace QuickFitness
                 {
                     time_ex = array_ex[kl].Time;
                     this.On_Text.Text = array_ex[kl].Decription;
+                    this.Image_1.Source = new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic" + array_ex[kl].Img_one));
+                    this.Image_2.Source = new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic" + array_ex[kl].Img_two));
+
                     kl++;
                 }
 
