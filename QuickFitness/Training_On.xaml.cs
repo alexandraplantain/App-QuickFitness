@@ -20,7 +20,7 @@ namespace QuickFitness
     /// </summary>
     public partial class Training_On : Window
     {
-        Exercise [] array_ex;
+        Exercise[] array_ex;
         Training train;
         User user;
         int kol;//общее кол-во итераций то есть и упр и отдых
@@ -98,14 +98,14 @@ namespace QuickFitness
                 if (p % 2 == 0)
                 {
                     time_ex = array_ex[kl].Time;
-                    this.On_Text.Text = array_ex[kl].Decription;
+                    this.On_Text.Text = array_ex[kl].Name_ex;
                     this.Image_1.Source = new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic" + array_ex[kl].Img_one));
                     this.Image_2.Source = new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic" + array_ex[kl].Img_two));
 
                     kl++;
                 }
 
-                    dt = new DispatcherTimer();
+                dt = new DispatcherTimer();
                 dt.Interval = TimeSpan.FromSeconds(1);
                 dt.Tick += dtTicker;
                 dt.Start();
@@ -121,15 +121,16 @@ namespace QuickFitness
                 win.Show();
             }
         }
-        
-        
+
+
 
         int increment = 0;
-        
+
         int time_ex;
         int time_rest = 15;
         bool flag1 = false;
         bool flag2 = false;
+        bool flag_min = false;
 
         private void dtTicker(object sender, EventArgs e)
         {
@@ -168,7 +169,23 @@ namespace QuickFitness
                 {
                     this.Do_panel.Visibility = Visibility.Visible;
                     this.Rest_panel.Visibility = Visibility.Hidden;
-                    this.Timer.Text = "0:" + (time_ex - increment).ToString();
+                    if (time_ex > 60)
+                    {
+                        if (this.Timer.Text == "1:0" || flag_min)
+                        {
+                            this.Timer.Text = "0:" + (time_ex - increment).ToString();
+                            flag_min = true;
+                        }
+                        else
+                        {
+                            this.Timer.Text = "1:" + ((time_ex - 60) - increment).ToString();
+                        }
+                    }
+                    else
+                    {
+                        this.Timer.Text = "0:" + (time_ex - increment).ToString();
+                    }
+
                 }
                 else
                 {
@@ -187,11 +204,11 @@ namespace QuickFitness
 
         private void Back_to_info_train_Click(object sender, RoutedEventArgs e)
         {
-            var win = new Info_train(train,user);
+            var win = new Info_train(train, user);
             win.Show();
             this.Close();
         }
 
-       
+
     }
 }

@@ -115,15 +115,14 @@
         <Button Content="" x:Name="Button_intens_one" Click="Button_intens_one_Click" Style="{DynamicResource ResourceKey=BorderlessButton_main}" HorizontalAlignment="Left" Height="25" Margin="423,64,0,0" VerticalAlignment="Top" Width="25" Background="#FF434343" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
         <Button Content="" x:Name="Button_intens_two" Click="Button_intens_two_Click" Style="{DynamicResource BorderlessButton_main}" HorizontalAlignment="Left" Height="25" Margin="481,64,0,0" VerticalAlignment="Top" Width="25" Background="#FF434343" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
         <Button Content="" x:Name="Button_intens_three" Click="Button_intens_three_Click" Style="{DynamicResource BorderlessButton_main}" HorizontalAlignment="Left" Height="25" Margin="540,64,0,0" VerticalAlignment="Top" Width="25" Background="#FF434343" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
-        <Grid x:Name="Learn" Visibility="Hidden" HorizontalAlignment="Left" Height="445" Margin="72,218,0,0" VerticalAlignment="Top" Width="460">
-            <TextBlock x:Name="Name_ex" Text="название упражнения" TextWrapping="Wrap" FontFamily="NEXT ART" FontWeight="Bold" FontSize="24" Foreground="White" Width="406" TextAlignment="Center" Height="29" VerticalAlignment="Top" Margin="21,0,0,0" HorizontalAlignment="Left"/>
-            <Image x:Name="Img1" Height="110" Width="212" VerticalAlignment="Top" Margin="0,87,0,0" HorizontalAlignment="Left"/>
-            <Image x:Name="Img2" Height="110" Width="212" VerticalAlignment="Top" Margin="248,87,0,0" HorizontalAlignment="Left"/>
-            <TextBlock x:Name="Disc_ex" Text="Описание" TextWrapping="Wrap" FontFamily="Rubik" FontWeight="Normal" FontSize="20" Foreground="White" Width="460" TextAlignment="Center" Height="130" VerticalAlignment="Top" Margin="0,315,0,0" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="Groupe" Height="27" Text="группа" TextWrapping="Wrap" Width="281" FontFamily="NEXT ART" FontWeight="Bold" FontSize="24" Foreground="#FFE6E6E6" VerticalAlignment="Top" Margin="0,241,0,0" HorizontalAlignment="Left"/>
-            <Ellipse x:Name="Int_1" Height="17" Stroke="#FFDEDEDE" Width="17" Fill="#FFFE5F1B" VerticalAlignment="Top" Margin="391,241,0,0" HorizontalAlignment="Left"/>
-            <Ellipse x:Name="Int_2" Height="17" Stroke="#FFDEDEDE" Width="17" Fill="#FFFE5F1B" VerticalAlignment="Top" Margin="418,241,0,0" HorizontalAlignment="Left"/>
-            <Ellipse x:Name="Int_3" Height="17" Stroke="#FFDEDEDE" Width="17" Fill="#FFFE5F1B" VerticalAlignment="Top" Margin="443,241,0,0" HorizontalAlignment="Left"/>
+        <Grid x:Name="Learn" Visibility="Hidden" HorizontalAlignment="Left" Height="448" VerticalAlignment="Top" Margin="76,215,0,0">
+            <TextBlock x:Name="Name_ex" Text="название упражнения" TextWrapping="Wrap" FontFamily="NEXT ART" FontWeight="Bold" FontSize="22" Foreground="White" Width="460" TextAlignment="Center" Height="70" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Image x:Name="Img1" Height="134" Width="258" VerticalAlignment="Top" Margin="99,76,0,0" HorizontalAlignment="Left"/>
+            <Image x:Name="Img2" Height="134" Width="258" VerticalAlignment="Top" Margin="99,236,0,0" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="Groupe" Height="31" Text="группа" TextWrapping="Wrap" Width="281" FontFamily="NEXT ART" FontWeight="Bold" FontSize="24" Foreground="#FFE6E6E6" VerticalAlignment="Top" Margin="0,417,0,0" HorizontalAlignment="Left"/>
+            <Ellipse x:Name="Int_1" Height="17" Stroke="#FFDEDEDE" Width="17" Fill="#FFFE5F1B" VerticalAlignment="Top" Margin="390,422,0,0" HorizontalAlignment="Left"/>
+            <Ellipse x:Name="Int_2" Height="17" Stroke="#FFDEDEDE" Width="17" Fill="#FFFE5F1B" VerticalAlignment="Top" Margin="418,422,0,0" HorizontalAlignment="Left"/>
+            <Ellipse x:Name="Int_3" Height="17" Stroke="#FFDEDEDE" Width="17" Fill="#FFFE5F1B" VerticalAlignment="Top" Margin="442,422,0,0" HorizontalAlignment="Left"/>
 
 
         </Grid>

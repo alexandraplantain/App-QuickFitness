@@ -18,8 +18,60 @@
     <None Remove="choose_login_start.png" />
     <None Remove="grad_block.png" />
     <None Remove="im.jpg" />
+    <None Remove="Resources\AllPic\Exercise\ex_10_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_10_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_11_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_11_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_12_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_12_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_13_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_13_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_14_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_14_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_15_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_15_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_16_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_16_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_17_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_17_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_18_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_18_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_19_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_19_2.png" />
     <None Remove="Resources\AllPic\Exercise\ex_1_1.png" />
     <None Remove="Resources\AllPic\Exercise\ex_1_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_20_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_20_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_21_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_21_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_22_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_22_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_23_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_23_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_24_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_24_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_25_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_25_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_26_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_26_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_27_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_27_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_2_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_2_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_3_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_3_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_4_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_4_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_5_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_5_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_6_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_6_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_7_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_7_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_8_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_8_2.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_9_1.png" />
+    <None Remove="Resources\AllPic\Exercise\ex_9_2.png" />
     <None Remove="Resources\AllPic\Training\train.png" />
     <None Remove="Resources\AllPic\Training\train_1.png" />
     <None Remove="Resources\AllPic\Training\train_10.png" />
@@ -68,8 +120,88 @@
     <Resource Include="choose_login_start.png" />
     <Resource Include="grad_block.png" />
     <Resource Include="im.jpg" />
-    <Resource Include="Resources\AllPic\Exercise\ex_1_1.png" />
-    <Resource Include="Resources\AllPic\Exercise\ex_1_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_10_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_10_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_11_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_11_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_12_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_12_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_13_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_13_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_14_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_14_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_15_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_15_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_16_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_16_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_17_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_17_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_18_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_18_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_19_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_19_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_1_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_1_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_20_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_20_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_21_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_21_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_22_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_22_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_23_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_23_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_24_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_24_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_25_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_25_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_26_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_26_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_27_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_27_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_2_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_2_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_3_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_3_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_4_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_4_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_5_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_5_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_6_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_6_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_7_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_7_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AllPic\Exercise\ex_8_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_8_2.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_9_1.png" />
+    <Resource Include="Resources\AllPic\Exercise\ex_9_2.png" />
     <Resource Include="Resources\AllPic\Training\train.png" />
     <Resource Include="Resources\AllPic\Training\train_1.png" />
     <Resource Include="Resources\AllPic\Training\train_10.png" />

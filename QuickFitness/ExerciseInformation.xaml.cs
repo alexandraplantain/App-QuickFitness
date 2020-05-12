@@ -24,6 +24,7 @@ namespace QuickFitness
     
     public partial class ExerciseInformation : Page
     {
+        Exercise ex;
 
         public ExerciseInformation()
         {

@@ -129,14 +129,22 @@ namespace QuickFitness
             }
         }
 
+        private void Input_Img()
+        {
+            win.Img1.Source= new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic" + exercise.Img_one));
+            win.Img2.Source = new BitmapImage(new Uri("pack://application:,,,/QuickFitness;component/Resources/AllPic" + exercise.Img_two));
+        }    
+
         private void Button_learn_Click(object sender, RoutedEventArgs e)
         {
             win.Learn.Visibility = Visibility.Visible;
             win.Back_info.Visibility = Visibility.Hidden;
             win.Name_ex.Text = exercise.Name_ex;
-            win.Disc_ex.Text = exercise.Decription;
+
+            //win.Disc_ex.Text = exercise.Decription;
             ChooseGroupe(exercise.Groupe, 2);
             ChooseIntensity(exercise.Intensity, 2);
+            Input_Img();
 
         }
     }
