@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using QuickFitness.Models;
 using System.Data.Entity;
+using System.Linq;
 
 namespace QuickFitness
 {
@@ -21,13 +22,11 @@ namespace QuickFitness
 
     public partial class chose_login : Window
     {
-       
+
 
         public chose_login()
         {
-
             InitializeComponent();
-            
         }
 
         private void Button_Click_Close(object sender, RoutedEventArgs e)
@@ -51,13 +50,65 @@ namespace QuickFitness
         {
             using (UserContext db = new UserContext())
             {
-                db.Users.Load();
-                var list = db.Users.Local.ToBindingList();
+                var user_linq = db.Users.Where(p => p.Login == this.input_login.Text).ToList();
                 bool flag1 = false;
                 bool flag2 = false;
-                foreach (var itme in list)
+                User Item = null;
+
+                if (user_linq.Count != 0)
                 {
-                    if (itme.Login == this.input_login.Text)
+                    flag1 = true;
+                    this.Error_not_match.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    this.Error_not_log.Visibility = Visibility.Visible;
+                    this.Error_not_match.Visibility = Visibility.Hidden;
+                }
+
+                if (flag1)
+                {
+                    var pass_linq = db.Users.Where(p => p.Password == this.input_password.Password).ToList();
+
+                    if (pass_linq.Count != 0)
+                    {
+                        flag2 = true;
+                        foreach (var item in pass_linq)
+                        {
+                            Item = item;
+                        }
+                    }
+                    else
+                    {
+                        this.Error_not_match.Visibility = Visibility.Visible;
+                        this.Error_not_log.Visibility = Visibility.Hidden;
+                    }
+                }
+
+                if (flag1 && flag2)
+                {
+                    var user = Item;
+                    var win_main = new MainTrainWin(user);
+                    win_main.Show();
+                    db.Dispose();
+                    this.Close();
+                    flag1 = flag2 = false;
+                }
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                using (UserContext db = new UserContext())
+                {                    
+                    var user_linq = db.Users.Where(p => p.Login == this.input_login.Text).ToList();
+                    bool flag1 = false;
+                    bool flag2 = false;
+                    User Item = null;
+
+                    if (user_linq.Count != 0)
                     {
                         flag1 = true;
                         this.Error_not_match.Visibility = Visibility.Hidden;
@@ -70,9 +121,15 @@ namespace QuickFitness
 
                     if (flag1)
                     {
-                        if (itme.Password == this.input_password.Password)
+                        var pass_linq = db.Users.Where(p => p.Password == this.input_password.Password).ToList();
+
+                        if (pass_linq.Count != 0)
                         {
                             flag2 = true;
+                            foreach (var item in pass_linq)
+                            {
+                                Item = item;
+                            }
                         }
                         else
                         {
@@ -83,7 +140,7 @@ namespace QuickFitness
 
                     if (flag1 && flag2)
                     {
-                        var user = itme;
+                        var user = Item;
                         var win_main = new MainTrainWin(user);
                         win_main.Show();
                         db.Dispose();
@@ -93,55 +150,7 @@ namespace QuickFitness
                 }
             }
         }
-
-        private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.Key==Key.Enter)
-            {
-                using (UserContext db = new UserContext())
-                {
-                    db.Users.Load();
-                    var list = db.Users.Local.ToBindingList();
-                    bool flag1 = false;
-                    bool flag2 = false;
-                    foreach (var itme in list)
-                    {
-                        if (itme.Login == this.input_login.Text)
-                        {
-                            flag1 = true;
-                            this.Error_not_match.Visibility = Visibility.Hidden;
-                        }
-                        else
-                        {
-                            this.Error_not_log.Visibility = Visibility.Visible;
-                            this.Error_not_match.Visibility = Visibility.Hidden;
-                        }
-
-                        if (flag1)
-                        {
-                            if (itme.Password == this.input_password.Password)
-                            {
-                                flag2 = true;
-                            }
-                            else
-                            {
-                                this.Error_not_match.Visibility = Visibility.Visible;
-                                this.Error_not_log.Visibility = Visibility.Hidden;
-                            }
-                        }
-
-                        if (flag1 && flag2)
-                        {
-                            var user = itme;
-                            var win_main = new MainTrainWin(user);
-                            win_main.Show();
-                            db.Dispose();
-                            this.Close();
-                            flag1 = flag2 = false;
-                        }
-                    }
-                }
-            }
-        }
     }
 }
+
+

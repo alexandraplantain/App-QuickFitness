@@ -24,14 +24,14 @@ namespace QuickFitness
         public DoubleWin(User us)
         {
             user = us;
-            InitializeComponent();
-
-           
+            InitializeComponent();           
         }
+
         private void Button_Click_Close(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();

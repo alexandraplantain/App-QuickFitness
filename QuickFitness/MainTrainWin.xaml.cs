@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using QuickFitness.Models;
 using System.Data.Entity;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace QuickFitness
 {
@@ -21,13 +22,27 @@ namespace QuickFitness
     public partial class MainTrainWin : Window
     {
         public User user;
+        bool flag_w =true;
         public MainTrainWin(User us)
         {
             InitializeComponent();
 
             user = us;
+            using (StaticsticContext db = new StaticsticContext())
+            {
+                var user_weight = db.Staticstics.Where(p => p.ID_user == user.ID_user).ToList();
+                if(user_weight.Count!=0)
+                {
+                    foreach(var item in user_weight)
+                    {
+                        this.Weight.Text = item.Weight_note;
+                        flag_w = false;
+                    }
+                }
+            }
 
-            using (UserContext db = new UserContext())
+
+                using (UserContext db = new UserContext())
             {
                 db.Users.Load();
                 var list = db.Users.Local.ToBindingList();
@@ -36,6 +51,7 @@ namespace QuickFitness
                     if (itme.Login == us.Login)
                     {
                         this.Name_user.Text = itme.Name.ToString();
+                        if(flag_w)
                         this.Weight.Text = itme.Weight_start.ToString();
                     }
                 }
@@ -156,7 +172,7 @@ namespace QuickFitness
 
                 this.Weight.Text = this.Add_weight.Text;
                 this.Button_update.Content = "Обновить";
-                    this.Add_weight.Text = "00,0";
+                    
                 flag2 = true;
 
                 using (StaticsticContext db = new StaticsticContext())
@@ -182,8 +198,8 @@ namespace QuickFitness
                         }
                     }
                 }
-
-                var win_stat = new Statistics_train(user);
+                    this.Add_weight.Text = "00,0";
+                    var win_stat = new Statistics_train(user);
                 this.Main_Frame.Navigate(win_stat);
                 }
                 else

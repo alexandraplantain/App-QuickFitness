@@ -29,7 +29,7 @@ namespace QuickFitness
             user = us;
             InitializeComponent();
             win_c = w;
-           var panel = new StackPanel();
+            var panel = new StackPanel();
             using (ExerciseContext db = new ExerciseContext())
             {
                 db.Exercises.Load();
@@ -71,9 +71,7 @@ namespace QuickFitness
                     }
                 }
                 this.List_train.Content = panel;
-            }
-            
-
+            }            
         }
 
         private void Groupe_2_Click(object sender, RoutedEventArgs e)
@@ -104,8 +102,7 @@ namespace QuickFitness
                     }
                 }
                 this.List_train.Content = panel;
-            }
-            
+            }          
         }
 
         private void Groupe_3_Click(object sender, RoutedEventArgs e)
@@ -136,8 +133,7 @@ namespace QuickFitness
                     }
                 }
                 this.List_train.Content = panel;
-            }
-            
+            }            
         }
 
         private void Groupe_4_Click(object sender, RoutedEventArgs e)
@@ -168,8 +164,7 @@ namespace QuickFitness
                     }
                 }
                 this.List_train.Content = panel;
-            }
-            
+            }            
         }
 
 
@@ -177,12 +172,16 @@ namespace QuickFitness
         {
             this.Button_first.Background = new SolidColorBrush(Color.FromRgb(222, 222, 222));
             this.Button_first.Foreground = new SolidColorBrush(Color.FromRgb(254, 95, 27));
+
             this.Button_second.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
             this.Button_second.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
             this.Button_third.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
             this.Button_third.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
             this.Button_four.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
             this.Button_four.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
             type_train = 1;
         }
 
@@ -199,6 +198,7 @@ namespace QuickFitness
 
             this.Button_four.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
             this.Button_four.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
             type_train = 2;
         }
 
@@ -215,6 +215,7 @@ namespace QuickFitness
 
             this.Button_four.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
             this.Button_four.Foreground = new SolidColorBrush(Color.FromRgb(222, 222, 222));
+
             type_train = 3;
         }
 
@@ -231,17 +232,16 @@ namespace QuickFitness
 
             this.Button_four.Background = new SolidColorBrush(Color.FromRgb(222, 222, 222));
             this.Button_four.Foreground = new SolidColorBrush(Color.FromRgb(254, 95, 27));
+
             type_train = 4;
-        }
-
-        
-
-        
+        }               
+       
         private void Button_intens_one_Click(object sender, RoutedEventArgs e)
         {
             this.Button_intens_one.Background = new SolidColorBrush(Color.FromRgb(254, 95, 27));
             this.Button_intens_two.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
             this.Button_intens_three.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+
             Intensity_num = 1;
         }
 
@@ -250,6 +250,7 @@ namespace QuickFitness
             this.Button_intens_one.Background = new SolidColorBrush(Color.FromRgb(254, 95, 27));
             this.Button_intens_two.Background = new SolidColorBrush(Color.FromRgb(254, 95, 27));
             this.Button_intens_three.Background = new SolidColorBrush(Color.FromRgb(67, 67, 67));
+
             Intensity_num = 2;
         }
 
@@ -258,6 +259,7 @@ namespace QuickFitness
             this.Button_intens_one.Background = new SolidColorBrush(Color.FromRgb(254, 95, 27));
             this.Button_intens_two.Background = new SolidColorBrush(Color.FromRgb(254, 95, 27));
             this.Button_intens_three.Background = new SolidColorBrush(Color.FromRgb(254, 95, 27));
+
             Intensity_num = 3;
         }
 
@@ -282,17 +284,11 @@ namespace QuickFitness
             }
 
             var ts = TimeSpan.FromSeconds(time_ex_all);
-
             this.Time.Text = ts.Minutes.ToString() + " мин";
-
         }
-
-        
 
         public void Remove_ex(int i)
         {
-
-
             list_ex_id.Remove(i);
             foreach (var item in list_ex)
             {
@@ -308,16 +304,11 @@ namespace QuickFitness
             var ts = TimeSpan.FromSeconds(time_ex_all);
 
             this.Time.Text = ts.Minutes.ToString() + " мин";
-
-
         }
-
-       
-
-        
+            
         int Intensity_num = 0;
         int type_train = 0;
-     public List<int> list_ex_id = new List<int>();
+        public List<int> list_ex_id = new List<int>();
 
         private void Create_Click(object sender, RoutedEventArgs e)
         {
@@ -331,12 +322,14 @@ namespace QuickFitness
                     db.SaveChanges();
 
                 }
+
                 using (TrainingContext db = new TrainingContext())
                 {
                     db.Trainings.Load();
                     var list = db.Trainings.Local.ToBindingList();
                     id_train = list.Count;
                 }
+
                 using (ConnectionContext db = new ConnectionContext())
                 {
                     foreach (var item in list_ex_id)
@@ -346,6 +339,7 @@ namespace QuickFitness
                     }
                     db.SaveChanges();
                 }
+
                 var win_user_train = new MainTrainWin(user);
                 win_user_train.Show();
                 win_c.Close();

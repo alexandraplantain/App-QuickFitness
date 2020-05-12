@@ -19,7 +19,6 @@ namespace QuickFitness
     /// </summary>
     public partial class ANNOUNCEMENTWorkoutFinale : Window
     {
-
         public ANNOUNCEMENTWorkoutFinale()
         {
             InitializeComponent();
@@ -29,6 +28,7 @@ namespace QuickFitness
         {
             this.Close();
         }
+
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();

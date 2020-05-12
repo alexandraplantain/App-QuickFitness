@@ -21,13 +21,13 @@ namespace QuickFitness
         public ERRORWin()
         {
             InitializeComponent();
-
-           
         }
+
         private void Button_Click_Close(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
@@ -40,13 +40,15 @@ namespace QuickFitness
                 case "ERRORDataEntry":
                     this.ERRORDataEntry.Visibility = Visibility.Visible;
                     break;
+
                 case "ERRORLoginClose":
                     this.ERRORLoginClose.Visibility = Visibility.Visible;
                     break;
+
                 case "ERRORWrongPassword":
                     this.ERRORWrongPassword.Visibility = Visibility.Visible;
                     break;
             }
-        }
+       }
     }
 }

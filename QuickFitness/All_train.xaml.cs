@@ -39,11 +39,7 @@ namespace QuickFitness
                     }
                 }
                 this.List_train.Content = panel;
-
-            }
-           
-            
+            }       
         }
-
     }
 }

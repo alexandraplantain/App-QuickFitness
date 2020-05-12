@@ -32,7 +32,6 @@ namespace QuickFitness
             ChooseIntensity(ex.Intensity);
             ChooseGroupe(ex.Groupe);
         }
-
        
         bool flag = true;
 
@@ -40,23 +39,20 @@ namespace QuickFitness
         {
             switch (g)
             {
-                case 1:
-                    
-                        this.Groupe.Text = "Руки и спина";
-                    
+                case 1:                    
+                    this.Groupe.Text = "Руки и спина";                    
                     break;
 
                 case 2:
-                    this.Groupe.Text = "Растяжка";
-                   
+                    this.Groupe.Text = "Растяжка";                   
                     break;
+
                 case 3:
-                    this.Groupe.Text = "Ноги и ягодицы";
-                    
+                    this.Groupe.Text = "Ноги и ягодицы";                    
                     break;
+
                 case 4:
-                    this.Groupe.Text = "Пресс";
-                    
+                    this.Groupe.Text = "Пресс";                    
                     break;
             }
         }
@@ -64,25 +60,19 @@ namespace QuickFitness
         private void ChooseIntensity(int i)
         {
             if (i == 1)
-            {
-               
-                    this.Int_1.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));
-               
+            {               
+                    this.Int_1.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));               
             }
             else if (i == 2)
-            {
-                
+            {                
                     this.Int_1.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));
-                    this.Int_2.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));
-               
+                    this.Int_2.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));               
             }
             else
-            {
-                
+            {                
                     this.Int_1.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));
                     this.Int_2.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));
-                    this.Int_3.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));
-                
+                    this.Int_3.Fill = new SolidColorBrush(Color.FromRgb(254, 95, 27));                
             }
         }
 

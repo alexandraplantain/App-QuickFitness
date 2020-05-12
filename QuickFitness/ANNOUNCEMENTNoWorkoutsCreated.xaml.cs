@@ -28,25 +28,18 @@ namespace QuickFitness
 
         private void Button_Click_Close(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            
-
+            this.Close();         
         }
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
         }
 
-
-
-
         MainTrainWin main_tr;
        
-
         public void Object_sends(MainTrainWin e)
         {
-             main_tr = e;
-           
+             main_tr = e;           
         }
 
         private void Button_create_train(object sender, RoutedEventArgs e)
@@ -54,7 +47,7 @@ namespace QuickFitness
             var win = new DoubleWin(user);
             win.Choose_frame(1);
             win.Show();
-           main_tr.Close();
+            main_tr.Close();
             this.Close();
         }
     }
