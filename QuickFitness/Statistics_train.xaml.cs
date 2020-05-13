@@ -31,6 +31,10 @@ namespace QuickFitness
         int kol_train = 0;
         int weight_up = 0;
         int time = 0;
+        int kol_1 = 0;
+        int kol_2 = 0;
+        int kol_3 = 0;
+        int kol_4 = 0;
 
 
         public Statistics_train(User us)
@@ -112,12 +116,9 @@ namespace QuickFitness
                                 {
                                     flag = true;
                                 }
+                                
                                 foreach (var item_ex in list_ex)
-                                {
-                                    int kol_1 = 0;
-                                    int kol_2 = 0;
-                                    int kol_3 = 0;
-                                    int kol_4 = 0;
+                                {                                   
                                     if (item_ex.ID_ex == item_con.ID_ex)
                                     {
                                         kol_ex++;
@@ -136,13 +137,14 @@ namespace QuickFitness
                                                 kol_4++;
                                                 break;
                                         }
-                                    }
-                                    Pie_Stat(kol_1, kol_2, kol_3, kol_4);
+                                    }                                    
                                 }
+                               
                             }
                         }
                     }
                 }
+                Pie_Stat(kol_1, kol_2, kol_3, kol_4);
             }
 
             this.Kol_ex_stat.Text = kol_ex.ToString();
@@ -186,6 +188,7 @@ namespace QuickFitness
                 this.Pie_3.Values = new ChartValues<double> { k3 };
                 this.Pie_4.Values = new ChartValues<double> { k4 };
                 this.Back_pie.Visibility = Visibility.Hidden;
+                this.Pie_chart_main.Visibility = Visibility.Visible;
             }
         }
 
