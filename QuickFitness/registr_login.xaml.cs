@@ -64,133 +64,144 @@ namespace QuickFitness
 
         private void Button_Click_Next_Regist(object sender, RoutedEventArgs e)
         {
-            
+            int er = 0;
 
-            if (flag2)
+            for (int i = 0; i < 3; i++)
             {
-                using (UserContext db = new UserContext())
+                if (flag2)
                 {
-                    db.Users.Load();
-                    var list = db.Users.Local.ToBindingList();
-                    foreach (var itme in list)
+                    using (UserContext db = new UserContext())
                     {
-                        if (itme.Login == this.new_login.Text)
+                        db.Users.Load();
+                        var list = db.Users.Local.ToBindingList();
+                        foreach (var itme in list)
                         {
-                            var win_c = new ERRORWin();
-                            win_c.ChooseError("ERRORLoginClose");
-                            win_c.Show();
-                        }
-                        else
-                        {
-                            if (this.new_login.Text == "")
+                            if (itme.Login == this.new_login.Text)
                             {
-                                var win_a = new ERRORWin();
-                                win_a.ChooseError("ERRORDataEntry");
-                                win_a.Show();
+                                var win_c = new ERRORWin();
+                                win_c.ChooseError("ERRORLoginClose");
+                                win_c.Show();
+                                er++;
                                 break;
+                                
                             }
                             else
                             {
-                                flag2 = false;
+                                if (this.new_login.Text == "")
+                                {
+                                    var win_a = new ERRORWin();
+                                    win_a.ChooseError("ERRORDataEntry");
+                                    win_a.Show();
+                                    er++;
+                                    break;
+                                    
+                                }
+                                else
+                                {
+                                    flag2 = false;
+                                }
                             }
                         }
-                    }
+                        if (er != 0)
+                            break;
 
-                }
-            }
-            else
-            {
-
-                if (flag3)
-                {
-                    Regex reg = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])\S{1,8}$");
-                    MatchCollection matches = reg.Matches(this.new_password.Text);
-                    if (matches.Count > 0)
-                    {
-                        flag3 = false;
-                    }
-                    else
-                    {
-                        var win_a = new ERRORWin();
-                        win_a.ChooseError("ERRORDataEntry");
-                        win_a.Show();
                     }
                 }
                 else
                 {
-                    if (flag)
+
+                    if (flag3)
                     {
-                        progress_bar_step++;
-                        flag = false;
+                        Regex reg = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])\S{1,8}$");
+                        MatchCollection matches = reg.Matches(this.new_password.Text);
+                        if (matches.Count > 0)
+                        {
+                            flag3 = false;
+                        }
+                        else
+                        {
+                            var win_a = new ERRORWin();
+                            win_a.ChooseError("ERRORDataEntry");
+                            win_a.Show();
+                            break;
+                        }
                     }
-
-                    flag4 = false;
-                    switch (progress_bar_step)
+                    else
                     {
-                        case 1:
-                            this.Progress_bar_registr.Value = 25;
-                            break;
-
-                        case 2:
-                            this.Progress_bar_registr.Value = 50;
-                            break;
-
-                        case 3:
-                            this.Progress_bar_registr.Value = 75;
-                            break;
-
-                        case 4:
-                            this.Progress_bar_registr.Value = 100;
-                            break;
-                    }
-
-                    switch (progress_bar_step)
-                    {
-
-                        case 1:
-                            this.Grid__regist_1.Visibility = Visibility.Visible;
-                            this.Grid_regist_2.Visibility = Visibility.Hidden;
-                            this.Grid_regist_3.Visibility = Visibility.Hidden;
-                            this.noti.Visibility = Visibility.Hidden;
+                        if (flag)
+                        {
                             progress_bar_step++;
-                            break;
+                            flag = false;
+                        }
 
-                        case 2:
-                            this.Grid__regist_1.Visibility = Visibility.Hidden;
-                            this.Grid_regist_2.Visibility = Visibility.Visible;
-                            this.Grid_regist_3.Visibility = Visibility.Hidden;
-                            this.noti.Visibility = Visibility.Hidden;
-                            progress_bar_step++;
-                            break;
+                        flag4 = false;
+                        switch (progress_bar_step)
+                        {
+                            case 1:
+                                this.Progress_bar_registr.Value = 25;
+                                break;
 
-                        case 3:
-                            this.Grid__regist_1.Visibility = Visibility.Hidden;
-                            this.Grid_regist_2.Visibility = Visibility.Hidden;
-                            this.Grid_regist_3.Visibility = Visibility.Visible;
-                            this.noti.Visibility = Visibility.Hidden;
-                            progress_bar_step++;
-                            break;
+                            case 2:
+                                this.Progress_bar_registr.Value = 50;
+                                break;
 
-                        case 4:
-                            this.Grid__regist_1.Visibility = Visibility.Hidden;
-                            this.Grid_regist_2.Visibility = Visibility.Hidden;
-                            this.Grid_regist_3.Visibility = Visibility.Hidden;
-                            this.noti.Visibility = Visibility.Visible;
-                            progress_bar_step++;
-                            break;
+                            case 3:
+                                this.Progress_bar_registr.Value = 75;
+                                break;
 
-                        case 5:
-                            DateTime data = DateTime.Now;
-                            using (UserContext db = new UserContext())
-                            {
-                                new_user = new User { ID_user = 1, Name = this.new_name.Text, Age = Convert.ToInt32(this.new_age.Text), Weight_start = this.new_w_s.Text, Weight_goal = this.new_w_g.Text, Data_start = data.ToString(), Login = this.new_login.Text, Password = this.new_password.Text };
-                                db.Users.Add(new_user);
-                                db.SaveChanges();
-                                MainTrainWin win = new MainTrainWin(new_user);
-                                win.Show();
-                                this.Close();
-                            }
-                            break;
+                            case 4:
+                                this.Progress_bar_registr.Value = 100;
+                                break;
+                        }
+
+                        switch (progress_bar_step)
+                        {
+
+                            case 1:
+                                this.Grid__regist_1.Visibility = Visibility.Visible;
+                                this.Grid_regist_2.Visibility = Visibility.Hidden;
+                                this.Grid_regist_3.Visibility = Visibility.Hidden;
+                                this.noti.Visibility = Visibility.Hidden;
+                                progress_bar_step++;
+                                break;
+
+                            case 2:
+                                this.Grid__regist_1.Visibility = Visibility.Hidden;
+                                this.Grid_regist_2.Visibility = Visibility.Visible;
+                                this.Grid_regist_3.Visibility = Visibility.Hidden;
+                                this.noti.Visibility = Visibility.Hidden;
+                                progress_bar_step++;
+                                break;
+
+                            case 3:
+                                this.Grid__regist_1.Visibility = Visibility.Hidden;
+                                this.Grid_regist_2.Visibility = Visibility.Hidden;
+                                this.Grid_regist_3.Visibility = Visibility.Visible;
+                                this.noti.Visibility = Visibility.Hidden;
+                                progress_bar_step++;
+                                break;
+
+                            case 4:
+                                this.Grid__regist_1.Visibility = Visibility.Hidden;
+                                this.Grid_regist_2.Visibility = Visibility.Hidden;
+                                this.Grid_regist_3.Visibility = Visibility.Hidden;
+                                this.noti.Visibility = Visibility.Visible;
+                                progress_bar_step++;
+                                break;
+
+                            case 5:
+                                DateTime data = DateTime.Now;
+                                using (UserContext db = new UserContext())
+                                {
+                                    new_user = new User { ID_user = 1, Name = this.new_name.Text, Age = Convert.ToInt32(this.new_age.Text), Weight_start = this.new_w_s.Text, Weight_goal = this.new_w_g.Text, Data_start = data.ToString(), Login = this.new_login.Text, Password = this.new_password.Text };
+                                    db.Users.Add(new_user);
+                                    db.SaveChanges();
+                                    MainTrainWin win = new MainTrainWin(new_user);
+                                    win.Show();
+                                    this.Close();
+                                }
+                                break;
+                        }
                     }
                 }
             }

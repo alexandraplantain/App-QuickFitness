@@ -22,7 +22,9 @@ namespace QuickFitness
     public partial class MainTrainWin : Window
     {
         public User user;
-        bool flag_w =true;
+        bool flag_w = true;
+        bool flag_ch = false;
+
         public MainTrainWin(User us)
         {
             InitializeComponent();
@@ -31,18 +33,20 @@ namespace QuickFitness
             using (StaticsticContext db = new StaticsticContext())
             {
                 var user_weight = db.Staticstics.Where(p => p.ID_user == user.ID_user).ToList();
-                if(user_weight.Count!=0)
+                if (user_weight.Count != 0)
                 {
-                    foreach(var item in user_weight)
+                    foreach (var item in user_weight)
                     {
                         this.Weight.Text = item.Weight_note;
                         flag_w = false;
                     }
+                    flag_ch = true;
                 }
+                
             }
 
 
-                using (UserContext db = new UserContext())
+            using (UserContext db = new UserContext())
             {
                 db.Users.Load();
                 var list = db.Users.Local.ToBindingList();
@@ -51,8 +55,8 @@ namespace QuickFitness
                     if (itme.Login == us.Login)
                     {
                         this.Name_user.Text = itme.Name.ToString();
-                        if(flag_w)
-                        this.Weight.Text = itme.Weight_start.ToString();
+                        if (flag_w)
+                            this.Weight.Text = itme.Weight_start.ToString();
                     }
                 }
 
@@ -151,12 +155,20 @@ namespace QuickFitness
 
             if (flag2)
             {
-                this.Weight.Visibility = Visibility.Hidden;
-                this.Add_weight.Visibility = Visibility.Visible;
-                this.Button_update.Content = "Сохранить";
-                flag2 = false;
-                
-                
+                if (flag_ch)
+                {
+                    this.Weight.Visibility = Visibility.Hidden;
+                    this.Add_weight.Visibility = Visibility.Visible;
+                    this.Button_update.Content = "Сохранить";
+                    flag2 = false;
+
+                }
+                else
+                {
+                    var win_er = new ERRORWin();
+                    win_er.ChooseError("ERRORNotTrain");
+                    win_er.Show();
+                }
 
             }
             else
@@ -165,42 +177,42 @@ namespace QuickFitness
                 this.Add_weight.Visibility = Visibility.Hidden;
                 Regex reg = new Regex(@"^[0-9]*[.,]?[0-9]+$");
                 MatchCollection matches = reg.Matches(this.Add_weight.Text);
-                if(matches.Count>0)
+                if (matches.Count > 0)
                 {
 
-                
 
-                this.Weight.Text = this.Add_weight.Text;
-                this.Button_update.Content = "Обновить";
-                    
-                flag2 = true;
 
-                using (StaticsticContext db = new StaticsticContext())
-                {
-                    db.Staticstics.Load();
-                    var list = db.Staticstics.Local.ToBindingList();
-                    int key=0;
-                    foreach(var item in list)
+                    this.Weight.Text = this.Add_weight.Text;
+                    this.Button_update.Content = "Обновить";
+
+                    flag2 = true;
+
+                    using (StaticsticContext db = new StaticsticContext())
                     {
-                        
-                        if(item.ID_user==user.ID_user)
+                        db.Staticstics.Load();
+                        var list = db.Staticstics.Local.ToBindingList();
+                        int key = 0;
+                        foreach (var item in list)
                         {
-                            key = item.ID_session;
+
+                            if (item.ID_user == user.ID_user)
+                            {
+                                key = item.ID_session;
+                            }
+                        }
+                        if (key != 0)
+                        {
+                            var item = db.Staticstics.Find(key);
+                            if (item != null)
+                            {
+                                item.Weight_note = this.Add_weight.Text;
+                                db.SaveChanges();
+                            }
                         }
                     }
-                    if(key!=0)
-                    {
-                        var item = db.Staticstics.Find(key);
-                        if(item!=null)
-                        {
-                            item.Weight_note = this.Add_weight.Text;
-                            db.SaveChanges();
-                        }
-                    }
-                }
                     this.Add_weight.Text = "00,0";
                     var win_stat = new Statistics_train(user);
-                this.Main_Frame.Navigate(win_stat);
+                    this.Main_Frame.Navigate(win_stat);
                 }
                 else
                 {

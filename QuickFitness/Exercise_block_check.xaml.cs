@@ -28,7 +28,14 @@ namespace QuickFitness
             exercise = ex;
             win = w;
             this.Name_ex.Text = ex.Name_ex;
-            this.Time_ex.Text = "0:" + ex.Time.ToString() + " мин";
+            if (ex.Time >= 60)
+            {
+                this.Time_ex.Text = "1:" + (ex.Time - 60).ToString() + " мин";
+            }
+            else
+            {
+                this.Time_ex.Text = "0:" + ex.Time.ToString() + " мин";
+            }
             ChooseIntensity(ex.Intensity);
             ChooseGroupe(ex.Groupe);
         }

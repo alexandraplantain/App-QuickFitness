@@ -45,8 +45,8 @@ namespace QuickFitness
                     this.ERRORLoginClose.Visibility = Visibility.Visible;
                     break;
 
-                case "ERRORWrongPassword":
-                    this.ERRORWrongPassword.Visibility = Visibility.Visible;
+                case "ERRORNotTrain":
+                    this.ERRORNotTrain.Visibility = Visibility.Visible;
                     break;
             }
        }

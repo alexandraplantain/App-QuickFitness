@@ -30,8 +30,14 @@ namespace QuickFitness
             this.Name_ex.Text = ex.Name_ex;
            ChooseIntensity(ex.Intensity, 1);
             ChooseGroupe(ex.Groupe, 1);
-            this.Time_ex.Text = "0:" + ex.Time.ToString() + " мин";
-
+            if (ex.Time >= 60)
+            {
+                this.Time_ex.Text = "1:" + (ex.Time - 60).ToString() + " мин";
+            }
+            else
+            {
+                this.Time_ex.Text = "0:" + ex.Time.ToString() + " мин";
+            }
 
         }
 

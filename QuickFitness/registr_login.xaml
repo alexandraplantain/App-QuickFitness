@@ -28,13 +28,13 @@
         
         <Grid x:Name="Grid_regist_2" Visibility="Hidden" HorizontalAlignment="Center" Height="288" Margin="0,250,0,0" VerticalAlignment="Top" Width="382">
             <Label Content="ваше имя" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="NEXT ART" FontSize="36" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="new_name" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Center" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
+            <TextBox x:Name="new_name" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Left" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
                 <TextBox.Foreground>
                     <SolidColorBrush Color="White" Opacity="0.7"/>
                 </TextBox.Foreground>
             </TextBox>
             <Label Content="ваш возраст" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="NEXT ART" FontSize="36" FontWeight="Bold" Foreground="White" Margin="0,158,0,0"/>
-            <TextBox x:Name="new_age" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Center" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
+            <TextBox x:Name="new_age" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Left" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
                 <TextBox.Foreground>
                     <SolidColorBrush Color="White" Opacity="0.7"/>
                 </TextBox.Foreground>
@@ -63,13 +63,13 @@
         <Label x:Name="noti" Content="удачных тренировок!" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="NEXT ART" FontSize="64" FontWeight="Bold" Foreground="White" Margin="0,339,0,0"/>
         <Grid x:Name="Grid_regist_3" Visibility="Hidden" HorizontalAlignment="Center" Height="288" VerticalAlignment="Top" Width="437" Margin="0,250,0,0">
             <Label Content="ваш начальный вес" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="NEXT ART" FontSize="36" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="new_w_s" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Center" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
+            <TextBox x:Name="new_w_s" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Left" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
                 <TextBox.Foreground>
                     <SolidColorBrush Color="White" Opacity="0.7"/>
                 </TextBox.Foreground>
             </TextBox>
             <Label Content="ваш желаемый вес" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="NEXT ART" FontSize="36" FontWeight="Bold" Foreground="White" Margin="3,158,0,0"/>
-            <TextBox x:Name="new_w_g" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Center" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
+            <TextBox x:Name="new_w_g" Style="{DynamicResource TextBoxStyle_round}" HorizontalAlignment="Center" Margin="0,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="70" FontFamily="Rubik" FontSize="24" TextAlignment="Left" Background="#FF434343" FontStyle="Normal" VerticalContentAlignment="Center" BorderBrush="Black" SelectionBrush="#FFFF5C16">
                 <TextBox.Foreground>
                     <SolidColorBrush Color="White" Opacity="0.7"/>
                 </TextBox.Foreground>
