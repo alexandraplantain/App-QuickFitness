@@ -8,7 +8,7 @@
         Title="ERRORWin" Height="411" Width="600" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen" Window.ResizeMode = "NoResize" WindowStyle="None">
 
     <Grid Background="#FF252525">
-        <Button x:Name="button_close"  Width="50" HorizontalAlignment="Right" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{x:Null}" Click="Button_Click_Close" >
+        <Button x:Name="button_close" Style="{DynamicResource Less_Blue}"  Width="50" HorizontalAlignment="Right" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{x:Null}" Click="Button_Click_Close" >
             <Button.Background>
                 <ImageBrush ImageSource="button_close.png"/>
             </Button.Background>

@@ -28,12 +28,7 @@ namespace QuickFitness
     {
         public MainWindow()
         {
-            InitializeComponent();
-
-
-
-
-
+            InitializeComponent();        
         }
 
         

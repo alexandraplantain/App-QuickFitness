@@ -14,13 +14,13 @@
         <Grid.Background>
             <ImageBrush ImageSource="background_basic.png"/>
         </Grid.Background>
-        <Button Content="ДАЛЕЕ" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="1284" Height="71" Background="#FFFE5F1B" FontFamily="Rubik" Click="Button_Click_Next_Regist" FontSize="36" BorderBrush="{x:Null}" Foreground="White"/>
-        <Button x:Name="Back_to_choose_login" BorderBrush="{x:Null}" Height="55" Margin="22,22,0,0" Width="55" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click_Return_Regist" >
+        <Button Content="ДАЛЕЕ" Style="{DynamicResource Less_Blue}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="1284" Height="71" Background="#FFFE5F1B" FontFamily="Rubik" Click="Button_Click_Next_Regist" FontSize="36" BorderBrush="{x:Null}" Foreground="White"/>
+        <Button x:Name="Back_to_choose_login" Style="{DynamicResource Less_Blue}" BorderBrush="{x:Null}" Height="55" Margin="22,22,0,0" Width="55" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click_Return_Regist" >
             <Button.Background>
                 <ImageBrush ImageSource="button_back.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button_close"  Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
+        <Button x:Name="button_close" Style="{DynamicResource Less_Blue}" Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
             <Button.Background>
                 <ImageBrush ImageSource="button_close.png"/>
             </Button.Background>

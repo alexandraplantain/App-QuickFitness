@@ -23,13 +23,13 @@
             </TextBox.Foreground>
         </TextBox>
         <Path Data="M451.8,374.64" Fill="#FF434343" HorizontalAlignment="Left" Height="1" Margin="452,375,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="1"/>
-        <Button x:Name="Regist_new_person" Click="Button_Made_new_login" Content="СОЗДАТЬ НОВЫЙ" HorizontalAlignment="Center" Height="87" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="1284" Background="#FFFF5C16" Foreground="White" FontFamily="Rubik" FontSize="36">
+        <Button x:Name="Regist_new_person" Style="{DynamicResource Less_Blue}"  Click="Button_Made_new_login" Content="СОЗДАТЬ НОВЫЙ" HorizontalAlignment="Center" Height="87" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="1284" Background="#FFFF5C16" Foreground="White" FontFamily="Rubik" FontSize="36">
             <Button.BorderBrush>
                 <SolidColorBrush Color="#F3707070" Opacity="0"/>
             </Button.BorderBrush>
         </Button>
         <Label Content="ВВЕДИТЕ ВАШ ЛОГИН" Background="{x:Null}" Width="322" Height="44" FontFamily="NEXT ART" FontSize="27" Foreground="White" FontWeight="DemiBold" Margin="484,238,0,532" FontStretch="Medium" HorizontalAlignment="Left"/>
-        <Button x:Name="button_close"  Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
+        <Button x:Name="button_close" Style="{DynamicResource Less_Blue}"  Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
             <Button.Background>
                 <ImageBrush ImageSource="button_close.png"/>
             </Button.Background>

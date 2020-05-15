@@ -12,8 +12,7 @@ namespace QuickFitness.Models
         public int ID_ex { get; set; }
         public string Name_ex { get; set; }
         public int Groupe { get; set; }
-        public int Time { get; set; }
-        public string Decription { get; set; }
+        public int Time { get; set; }        
         public int Intensity { get; set; }
         public string Img_one { get; set; }
         public string Img_two { get; set; }

@@ -17,14 +17,14 @@
 
         <Rectangle HorizontalAlignment="Center" Height="95" Margin="0,426,0,0" VerticalAlignment="Top" Width="1284" Fill="#FF434343"/>
         <TextBlock x:Name="Train_info" HorizontalAlignment="Center" Height="63" Margin="0,445,0,0"  Text="Описание" TextWrapping="Wrap" VerticalAlignment="Top" Width="1200" Foreground="White" FontFamily="Rubik" FontSize="20" TextAlignment="Center"/>
-        <Button x:Name="Back_to_choose_login" BorderBrush="{x:Null}" Height="55" Click="Button_go_to_all_train" Margin="25,23,1204,736" Width="55">
+        <Button x:Name="Back_to_choose_login" BorderBrush="{x:Null}" Style="{DynamicResource Less_Blue}" Height="55" Click="Button_go_to_all_train" Margin="25,23,1204,736" Width="55">
             <Button.Background>
                 <ImageBrush ImageSource="button_back.png"/>
             </Button.Background>
 
 
         </Button>
-        <Button x:Name="button_close"  Width="30" HorizontalAlignment="Right" Height="30" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
+        <Button x:Name="button_close" Style="{DynamicResource Less_Blue}" Width="30" HorizontalAlignment="Right" Height="30" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
             <Button.Background>
                 <ImageBrush ImageSource="button_close.png"/>
             </Button.Background>

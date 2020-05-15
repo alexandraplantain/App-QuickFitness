@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="background_basic.png"/>
         </Grid.Background>
-        <Button x:Name="Back_to_choose_login" BorderBrush="{x:Null}" Height="55" Click="Button_go_to_all_train" Margin="25,18,1204,741" Width="55">
+        <Button x:Name="Back_to_choose_login" Style="{DynamicResource Less_Blue}" BorderBrush="{x:Null}" Height="55" Click="Button_go_to_all_train" Margin="25,18,1204,741" Width="55">
             <Button.Background>
                 <ImageBrush ImageSource="button_back.png"/>
             </Button.Background>
@@ -18,7 +18,7 @@
 
 
         </Button>
-        <Button x:Name="button_close"  Width="30" HorizontalAlignment="Right" Height="30" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
+        <Button x:Name="button_close" Style="{DynamicResource Less_Blue}" Width="30" HorizontalAlignment="Right" Height="30" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
             <Button.Background>
                 <ImageBrush ImageSource="button_close.png"/>
             </Button.Background>

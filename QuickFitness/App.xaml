@@ -5,7 +5,31 @@
              StartupUri="MainWindow.xaml">
    
     <Application.Resources>
-        
+
+        <Style TargetType="{x:Type Button}" x:Key="Less_Blue">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value=".6" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand" />
+                    <Setter Property="BorderThickness"  Value="2"/>
+                    <Setter Property="BorderBrush" Value="#B63600"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         
         <Style TargetType="{x:Type Button}" x:Key="BorderlessButton_main">
             <Setter Property="Background" Value="Transparent" />
