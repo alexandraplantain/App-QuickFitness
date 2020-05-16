@@ -24,9 +24,7 @@
         </Button>
         <Grid x:Name="Do_panel" Visibility="Visible"  HorizontalAlignment="Center" Height="510" Margin="0,159,0,0" VerticalAlignment="Top" Width="1118">
             <Image x:Name="Image_1" Height="214" Width="386" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="135,30,0,0">
-                <Image.OpacityMask>
-                    <ImageBrush ImageSource="im.jpg" Stretch="Fill" TileMode="Tile"/>
-                </Image.OpacityMask>
+                
 
             </Image>
             <Image x:Name="Image_2" Height="214" Width="386" VerticalAlignment="Top" Margin="609,30,0,0" HorizontalAlignment="Left"/>

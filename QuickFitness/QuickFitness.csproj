@@ -13,7 +13,6 @@
     <None Remove="basic_back_2.png" />
     <None Remove="button_back.png" />
     <None Remove="button_close.png" />
-    <None Remove="cb12b47edc373ee5fe1e5de28ccfb5df.jpg" />
     <None Remove="choose_login.png" />
     <None Remove="choose_login_start.png" />
     <None Remove="grad_block.png" />
@@ -286,7 +285,20 @@
     <None Remove="Resources\AllPic\Training\train_8.png" />
     <None Remove="Resources\AllPic\Training\train_9.png" />
     <None Remove="Resources\AllPic\Training\user_training.png" />
+    <None Remove="Resources\background_1.png" />
+    <None Remove="Resources\background_basic.png" />
+    <None Remove="Resources\basic_back_2.png" />
+    <None Remove="Resources\button_back.png" />
+    <None Remove="Resources\button_close.png" />
+    <None Remove="Resources\choose_login_start.png" />
+    <None Remove="Resources\ERROR data entry.png" />
+    <None Remove="Resources\ERROR no login.png" />
+    <None Remove="Resources\grad_block.png" />
+    <None Remove="Resources\im.jpg" />
     <None Remove="Resources\logo_main.png" />
+    <None Remove="Resources\reward.png" />
+    <None Remove="Resources\reward_win.png" />
+    <None Remove="Resources\train.png" />
     <None Remove="reward.png" />
     <None Remove="reward_win.png" />
     <None Remove="train.png" />
@@ -310,7 +322,6 @@
     <Resource Include="basic_back_2.png" />
     <Resource Include="button_back.png" />
     <Resource Include="button_close.png" />
-    <Resource Include="cb12b47edc373ee5fe1e5de28ccfb5df.jpg" />
     <Resource Include="choose_login_start.png" />
     <Resource Include="grad_block.png" />
     <Resource Include="im.jpg" />
@@ -898,7 +909,48 @@
     <Resource Include="Resources\AllPic\Training\train_8.png" />
     <Resource Include="Resources\AllPic\Training\train_9.png" />
     <Resource Include="Resources\AllPic\Training\user_training.png" />
-    <Resource Include="Resources\logo_main.png" />
+    <Resource Include="Resources\background_1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\background_basic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\basic_back_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\button_back.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\button_close.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\choose_login_start.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ERROR data entry.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ERROR no login.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\grad_block.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\im.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\logo_main.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\reward.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\reward_win.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\train.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="reward.png" />
     <Resource Include="reward_win.png" />
     <Resource Include="train.png" />

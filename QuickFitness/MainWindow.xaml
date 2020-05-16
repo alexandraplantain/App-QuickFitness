@@ -27,12 +27,12 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Button x:Name="button_close"  Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
+        <Button x:Name="button_close" Style="{DynamicResource Less_Blue}"  Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
             <Button.Background>
                 <ImageBrush ImageSource="button_close.png"/>
             </Button.Background>
         </Button>
-        <Image  Grid.Row="2" Source="Resources/logo_main.png"></Image>
+        <Image  Grid.Row="2" Source="/Resources/logo_main.png"></Image>
         <Label Grid.Row="4" Content="Начни свой путь к красивому телу" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFFFF" FontSize="36" FontFamily="Rubik"></Label>
         <Button x:Name="Button_start_app"  Grid.Row="5" Style="{StaticResource BorderlessButton_main}" Width="596" Height="78" HorizontalAlignment="Center"  VerticalAlignment="Center" Background="#434343" BorderBrush="#FE5F1B" Click="Button_Click_Choose_login">
             <Label Content="Начать..." Background="#434343"  FontFamily="Avernus URW" FontSize="36" Foreground="#FE5F1B"></Label>

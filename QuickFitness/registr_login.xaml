@@ -22,7 +22,7 @@
         </Button>
         <Button x:Name="button_close" Style="{DynamicResource Less_Blue}" Width="30" HorizontalAlignment="Left" Height="30" Margin="1254,0,0,0" VerticalAlignment="Top" Click="Button_Click_Close">
             <Button.Background>
-                <ImageBrush ImageSource="button_close.png"/>
+                <ImageBrush ImageSource="/Resources/button_close.png"/>
             </Button.Background>
         </Button>
         
