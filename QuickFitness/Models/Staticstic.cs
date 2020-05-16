@@ -15,6 +15,5 @@ namespace QuickFitness.Models
         public int Time { get; set; }
         public string Data_traning { get; set; }
         public string Weight_note { get; set; }
-
     }
 }

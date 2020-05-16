@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuickFitness.MainWindow">
+    <Position X="1" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAJAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.MainTrainWin">
+    <Position X="3.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAQAAIAAJACAAAAEAEEAIAABASBAACCAAAABAAQA=</HashCode>
+      <FileName>MainTrainWin.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.All_train">
+    <Position X="3.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>All_train.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.ANNOUNCEMENTNoWorkoutsCreated">
+    <Position X="6.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAJAAAAAAAAIAAAAAAAAAAIAAAAAAAAAQA=</HashCode>
+      <FileName>ANNOUNCEMENTNoWorkoutsCreated.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.ANNOUNCEMENTWorkoutFinale">
+    <Position X="8.75" Y="13" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ANNOUNCEMENTWorkoutFinale.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.chose_login">
+    <Position X="1" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>chose_login.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Create_train">
+    <Position X="8.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAJCBAAAAEAQAAoAAAIACIAAgAAARAAIABAAUA=</HashCode>
+      <FileName>Create_train.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.DoubleWin">
+    <Position X="11.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAACEAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>DoubleWin.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.ERRORWin">
+    <Position X="1" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAJAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ERRORWin.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Exercise_block_check">
+    <Position X="6.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQQBAAIAAAAAAAAYAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Exercise_block_check.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Exercise_block_learn">
+    <Position X="3.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABQQBAAAAAAAAAAAIAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Exercise_block_learn.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.ExerciseInformation">
+    <Position X="6.25" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAUAAAAIAAAIACIAAgAAABAAAAACAkA=</HashCode>
+      <FileName>ExerciseInformation.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Groupe_train">
+    <Position X="1" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAIAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Groupe_train.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Info_train">
+    <Position X="11.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAhAAAAIgAJAABAABAAAgAAAAAAAAAABAAAAAAAAQA=</HashCode>
+      <FileName>Info_train.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.registr_login">
+    <Position X="11.25" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QBEAAAAAAAAJAAAAAIAgAAAAAAAACAAEAAAAAAgAAQA=</HashCode>
+      <FileName>registr_login.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Statistics_train">
+    <Position X="6.25" Y="10.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAQAAABCAAAIAAAAACAAAABAgACRgCAAAAAgCAQA=</HashCode>
+      <FileName>Statistics_train.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.TrainBlock">
+    <Position X="1" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIAAAAAJAABAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>TrainBlock.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Training_On">
+    <Position X="8.75" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAigCAAIAAJAAAAAAAAECmAAAAASAAAgEQACGAACQA=</HashCode>
+      <FileName>Training_On.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.User_train">
+    <Position X="3.75" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>User_train.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickFitness.Week_block">
+    <Position X="11.25" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAAAABABA=</HashCode>
+      <FileName>Week_block.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
