@@ -8,9 +8,7 @@ namespace QuickFitness.Models
     class ExerciseContext :DbContext
     {
         public ExerciseContext() : base("DefaultConnection")
-        {
-
-        }
+        { }
 
         public DbSet<Exercise> Exercises { get; set; }
     }

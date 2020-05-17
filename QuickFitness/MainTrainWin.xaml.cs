@@ -28,7 +28,6 @@ namespace QuickFitness
         public MainTrainWin(User us)
         {
             InitializeComponent();
-
             user = us;
             using (StaticsticContext db = new StaticsticContext())
             {
@@ -41,29 +40,15 @@ namespace QuickFitness
                         flag_w = false;
                     }
                     flag_ch = true;
-                }
-                
+                }                
             }
 
-
-            using (UserContext db = new UserContext())
-            {
-                db.Users.Load();
-                var list = db.Users.Local.ToBindingList();
-                foreach (var itme in list)
-                {
-                    if (itme.Login == us.Login)
-                    {
-                        this.Name_user.Text = itme.Name.ToString();
-                        if (flag_w)
-                            this.Weight.Text = itme.Weight_start.ToString();
-                    }
-                }
-
-            }
+            this.Name_user.Text =user.Name.ToString();
+            if (flag_w)
+                this.Weight.Text = user.Weight_start.ToString();
+            
             All_train win_all = new All_train(user);
             this.Main_Frame.Navigate(win_all);
-
         }
 
 
@@ -80,6 +65,7 @@ namespace QuickFitness
         }
 
         bool flag1 = true;
+
         private void Button_Click_Open_all_train(object sender, RoutedEventArgs e)
         {
             All_train win_all = new All_train(user);
@@ -88,7 +74,6 @@ namespace QuickFitness
 
         private void Button_Click_Open_user_train(object sender, RoutedEventArgs e)
         {
-
             MainTrainWin win_main = new MainTrainWin(user);
             win_main = this;
 
@@ -100,7 +85,6 @@ namespace QuickFitness
         private void Button_Click_Open_groupe_train(object sender, RoutedEventArgs e)
         {
             Groupe_train win_gr = new Groupe_train(user);
-
             this.Main_Frame.Navigate(win_gr);
         }
 
@@ -108,11 +92,14 @@ namespace QuickFitness
         {
             var win_creat = new DoubleWin(user);
             win_creat.Choose_frame(1);
-
             win_creat.Show();
-
             this.Close();
+        }        
 
+        private void Button_Click_Open_statistics(object sender, RoutedEventArgs e)
+        {
+            var win_stat = new Statistics_train(user);
+            this.Main_Frame.Navigate(win_stat);
         }
 
         private void Button_Another_User(object sender, RoutedEventArgs e)
@@ -120,12 +107,6 @@ namespace QuickFitness
             var win_ch = new chose_login();
             win_ch.Show();
             this.Close();
-        }
-
-        private void Button_Click_Open_statistics(object sender, RoutedEventArgs e)
-        {
-            var win_stat = new Statistics_train(user);
-            this.Main_Frame.Navigate(win_stat);
         }
 
         private void Button_Click_Open_train(object sender, RoutedEventArgs e)
@@ -228,14 +209,10 @@ namespace QuickFitness
 
         private void Open_train_MouseEnter(object sender, MouseEventArgs e)
         {
-
             this.Open_all_train.Visibility = Visibility.Visible;
             this.Open_groupr_train.Visibility = Visibility.Visible;
             this.Open_user_train.Visibility = Visibility.Visible;
             this.Create_new_train.Visibility = Visibility.Visible;
-
-
-
         }
 
         private void Open_train_MouseLeave(object sender, MouseEventArgs e)

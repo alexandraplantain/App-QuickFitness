@@ -13,10 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using QuickFitness.Models;
-using System.Data.Entity;
-
-
 
 
 namespace QuickFitness
@@ -29,9 +25,7 @@ namespace QuickFitness
         public MainWindow()
         {
             InitializeComponent();        
-        }
-
-        
+        }        
 
         private void Button_Click_Close(object sender, RoutedEventArgs e)
         {
@@ -47,8 +41,6 @@ namespace QuickFitness
             chose_login chose_Login = new chose_login();
             chose_Login.Show();
             this.Close();
-        }
-
-        
+        }        
     }
 }

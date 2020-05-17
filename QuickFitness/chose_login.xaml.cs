@@ -51,6 +51,7 @@ namespace QuickFitness
             using (UserContext db = new UserContext())
             {
                 var user_linq = db.Users.Where(p => p.Login == this.input_login.Text).ToList();
+
                 bool flag1 = false;
                 bool flag2 = false;
                 User Item = null;
@@ -87,12 +88,10 @@ namespace QuickFitness
 
                 if (flag1 && flag2)
                 {
-                    var user = Item;
-                    var win_main = new MainTrainWin(user);
+                    var win_main = new MainTrainWin(Item);
                     win_main.Show();
                     db.Dispose();
-                    this.Close();
-                    flag1 = flag2 = false;
+                    this.Close();                    
                 }
             }
         }

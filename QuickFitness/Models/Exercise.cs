@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 namespace QuickFitness.Models
 {
    public class Exercise
-    {
+   {
         [Key]
         public int ID_ex { get; set; }
         public string Name_ex { get; set; }
@@ -16,5 +16,5 @@ namespace QuickFitness.Models
         public int Intensity { get; set; }
         public string Img_one { get; set; }
         public string Img_two { get; set; }
-    }
+   }
 }
