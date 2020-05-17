@@ -320,7 +320,6 @@ namespace QuickFitness
                     Training new_train = new Training { Name_training = this.new_name.Text, Description = this.new_Disc.Text, Groupe = type_train, ID_training = 1, ID_type = user.ID_user, Img = "/Training/user_training.png", Intensity = Intensity_num, Time = time_ex_all };
                     db.Trainings.Add(new_train);
                     db.SaveChanges();
-
                 }
 
                 using (TrainingContext db = new TrainingContext())

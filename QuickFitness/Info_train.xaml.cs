@@ -50,11 +50,7 @@ namespace QuickFitness
                     }
                 }
             }
-
-
-
-                    Fiil_progress(day); //в днях
-
+            Fiil_progress(day); //в днях
         }
 
          
@@ -196,9 +192,7 @@ namespace QuickFitness
                 kl++;
             }
 
-
-            var win_on = new Training_On(user, train, array_ex, kl);
-            
+            var win_on = new Training_On(user, train, array_ex, kl);            
             win_on.Show();
             this.Close();
         }

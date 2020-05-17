@@ -48,10 +48,6 @@ namespace QuickFitness
 
        
 
-       //написать функции которые будут переопределять перемнную с условием и перерисовать цвет кнопок при выборе
-
-        
-
        
 
         private void Button_first_Click(object sender, RoutedEventArgs e)
@@ -77,12 +73,9 @@ namespace QuickFitness
                         var a = new TrainBlock(item, user);
                         panel.Children.Add(a);
                     }
-                }
-               
-
+                }             
             }
             this.List_train.Content = panel;
-
         }
 
         private void Button_second_Click(object sender, RoutedEventArgs e)

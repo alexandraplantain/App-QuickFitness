@@ -82,7 +82,8 @@ namespace QuickFitness
 
         DispatcherTimer dt;
         int p = 0;
-        bool k = true;
+       
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Time_go();
@@ -125,7 +126,6 @@ namespace QuickFitness
 
 
         int increment = 0;
-
         int time_ex;
         int time_rest = 15;
         bool flag1 = false;
@@ -135,7 +135,6 @@ namespace QuickFitness
         private void dtTicker(object sender, EventArgs e)
         {
             increment++;
-
             if (p % 2 == 1)
             {
                 if (increment > time_ex)
@@ -153,18 +152,13 @@ namespace QuickFitness
 
             if (flag1 || flag2)
             {
-
                 dt.Stop();
                 increment = 0;
                 Time_go();
                 flag1 = flag2 = false;
-
-
-
             }
             else
             {
-
                 if (p % 2 == 1)
                 {
                     this.Do_panel.Visibility = Visibility.Visible;
@@ -189,17 +183,11 @@ namespace QuickFitness
                 }
                 else
                 {
-
                     this.Do_panel.Visibility = Visibility.Hidden;
                     this.Rest_panel.Visibility = Visibility.Visible;
                     this.Timer_rest.Text = "0:" + (time_rest - increment).ToString();
-
                 }
-
-
             }
-
-
         }
 
         private void Back_to_info_train_Click(object sender, RoutedEventArgs e)
