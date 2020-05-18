@@ -33,7 +33,7 @@
             </Button.Background>
         </Button>
         <Image  Grid.Row="2" Source="/Resources/logo_main.png"></Image>
-        <Label Grid.Row="4" Content="Начни свой путь к красивому телу" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFFFF" FontSize="36" FontFamily="Rubik"></Label>
+        <Label Grid.Row="4" Content="Начни свой путь к красивому телу" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FFFFFF" FontSize="26" FontFamily="NEXT ART" FontWeight="Bold" Margin="0,51,0,0"></Label>
         <Button x:Name="Button_start_app"  Grid.Row="5" Style="{StaticResource BorderlessButton_main}" Width="596" Height="78" HorizontalAlignment="Center"  VerticalAlignment="Center" Background="#434343" BorderBrush="#FE5F1B" Click="Button_Click_Choose_login">
             <Label Content="Начать..." Background="#434343"  FontFamily="Avernus URW" FontSize="36" Foreground="#FE5F1B"></Label>
 

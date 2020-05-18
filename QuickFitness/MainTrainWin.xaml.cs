@@ -156,7 +156,7 @@ namespace QuickFitness
             {
                 this.Weight.Visibility = Visibility.Visible;
                 this.Add_weight.Visibility = Visibility.Hidden;
-                Regex reg = new Regex(@"^[0-9]*[.,]?[0-9]+$");
+                Regex reg = new Regex(@"^[0-9]*[,]?[0-9]+$");
                 MatchCollection matches = reg.Matches(this.Add_weight.Text);
                 if (matches.Count > 0)
                 {

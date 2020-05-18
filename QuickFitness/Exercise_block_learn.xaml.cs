@@ -145,9 +145,8 @@ namespace QuickFitness
         {
             win.Learn.Visibility = Visibility.Visible;
             win.Back_info.Visibility = Visibility.Hidden;
-            win.Name_ex.Text = exercise.Name_ex;
-
-            //win.Disc_ex.Text = exercise.Decription;
+            win.Name_ex.Text = exercise.Name_ex; 
+           
             ChooseGroupe(exercise.Groupe, 2);
             ChooseIntensity(exercise.Intensity, 2);
             Input_Img();

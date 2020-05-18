@@ -163,7 +163,9 @@ namespace QuickFitness
             }
             else
             {
-                this.Progress.Value = (   Convert.ToDouble(weight)  - Convert.ToDouble(user.Weight_goal)  ) / (    Convert.ToDouble(user.Weight_start) -  Convert.ToDouble(user.Weight_goal) ) ;
+                
+                int prog= Convert.ToInt32(((Convert.ToDouble(user.Weight_start) - Convert.ToDouble(weight)) / (Convert.ToDouble(user.Weight_start) - Convert.ToDouble(user.Weight_goal)))*100);
+                this.Progress.Value = prog;
             }
         }
 

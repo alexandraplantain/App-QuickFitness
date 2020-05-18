@@ -296,8 +296,20 @@
     <None Remove="Resources\grad_block.png" />
     <None Remove="Resources\im.jpg" />
     <None Remove="Resources\logo_main.png" />
+    <None Remove="Resources\NEXT ART_Bold.ttf" />
+    <None Remove="Resources\NEXT ART_Thin.otf" />
     <None Remove="Resources\reward.png" />
     <None Remove="Resources\reward_win.png" />
+    <None Remove="Resources\Rubik-Black.ttf" />
+    <None Remove="Resources\Rubik-BlackItalic.ttf" />
+    <None Remove="Resources\Rubik-Bold.ttf" />
+    <None Remove="Resources\Rubik-BoldItalic.ttf" />
+    <None Remove="Resources\Rubik-Italic.ttf" />
+    <None Remove="Resources\Rubik-Light.ttf" />
+    <None Remove="Resources\Rubik-LightItalic.ttf" />
+    <None Remove="Resources\Rubik-Medium.ttf" />
+    <None Remove="Resources\Rubik-MediumItalic.ttf" />
+    <None Remove="Resources\Rubik-Regular.ttf" />
     <None Remove="Resources\train.png" />
     <None Remove="reward.png" />
     <None Remove="reward_win.png" />
@@ -942,10 +954,46 @@
     <Resource Include="Resources\logo_main.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\NEXT ART_Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\NEXT ART_Thin.otf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\reward.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\reward_win.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-Black.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-BlackItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-BoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-Light.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-LightItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-Medium.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-MediumItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Rubik-Regular.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\train.png">

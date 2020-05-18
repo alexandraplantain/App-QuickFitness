@@ -69,7 +69,7 @@ namespace QuickFitness
 
                 if (flag1)
                 {
-                    var pass_linq = db.Users.Where(p => p.Password == this.input_password.Password).ToList();
+                    var pass_linq = db.Users.Where(p => p.Password == this.input_password.Password && p.Login==this.input_login.Text).ToList();
 
                     if (pass_linq.Count != 0)
                     {

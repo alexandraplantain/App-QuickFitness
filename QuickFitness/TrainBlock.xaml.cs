@@ -67,9 +67,7 @@ namespace QuickFitness
             Info_train win = new Info_train(train, user);
             win.Show();
             MainTrainWin wind = (MainTrainWin)Window.GetWindow(this);
-            wind.Close();
-            
-
+            wind.Close();           
         }
     }
 }

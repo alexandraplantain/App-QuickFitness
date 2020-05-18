@@ -29,7 +29,7 @@
             </Image>
             <Image x:Name="Image_2" Height="214" Width="386" VerticalAlignment="Top" Margin="609,30,0,0" HorizontalAlignment="Left"/>
             <TextBlock x:Name="On_Text" Height="33" Text="ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ" TextWrapping="Wrap" Width="1118" FontFamily="Rubik" FontSize="24" TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Margin="0,293,0,0" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="Timer" Height="179" Text="0:30" TextWrapping="Wrap" Width="535" Foreground="#FFFE5F1B" FontSize="200" FontFamily="NEXT ART" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Top" Margin="302,331,0,0" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="Timer" Height="179" Text="0:00" TextWrapping="Wrap" Width="535" Foreground="#FFFE5F1B" FontSize="200" FontFamily="NEXT ART" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Top" Margin="302,331,0,0" HorizontalAlignment="Left"/>
         </Grid>
         <Button x:Name="Stop_time" Click="Button_stop_time" Content="остановить таймер" HorizontalAlignment="Left" Style="{DynamicResource BorderlessButton_main}" Margin="376,700,0,0" VerticalAlignment="Top" Width="555" Height="60" BorderBrush="{x:Null}" Background="#FF434343" Foreground="#FFDEDEDE" FontSize="34" FontFamily="NEXT ART" FontWeight="Bold"/>
         <Grid x:Name="Rest_panel" Visibility="Hidden"  HorizontalAlignment="Left" Height="475" Margin="350,0,0,0" VerticalAlignment="Center">

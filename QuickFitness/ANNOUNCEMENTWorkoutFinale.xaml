@@ -18,9 +18,8 @@
         </Button>
         <Label Content="сегодня был последний" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="495" Foreground="White" FontFamily="NEXT ART" FontSize="32" FontWeight="Bold" Margin="0,185,0,0"/>
         <Label Content="день этой тренировки" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="440" Foreground="White" FontFamily="NEXT ART" FontSize="32" FontWeight="Bold" Margin="0,227,0,0"/>
-        <Label Content="при нажатии кнопки &quot;Начать&quot;" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="342" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,292,0,0"/>
-        <Label Content="весь прогресс обнулится и вы" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="345" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,320,0,0"/>
-        <Label Content="сможете начать заново" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="275" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,348,0,0"/>
+        <Label Content="но вы можете продолжать выполнять" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="440" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,292,0,0"/>
+        <Label Content="данную тренировку" HorizontalAlignment="Center" Height="28" VerticalAlignment="Top" Width="233" Foreground="#FF7D7D7D" FontFamily="NEXT ART" FontSize="18" FontWeight="Bold" Margin="0,320,0,0"/>
 
     </Grid>
 </Window>

@@ -77,12 +77,17 @@ namespace QuickFitness
                         day++;
                     }
                 }
+                day++;
                 DateTime data = DateTime.Now;
                 var new_stat = new Staticstic { ID_session = 1, ID_training = train.ID_training, ID_user = user.ID_user, Time = train.Time, Weight_note = weight, Data_traning = data.ToString() };
                 db.Staticstics.Add(new_stat);
-                db.SaveChanges();
-                Fiil_progress(day); //в днях
-
+                db.SaveChanges();              
+            }
+            Fiil_progress(day); //в днях
+            if(day==21)
+            {
+                var win_ano = new ANNOUNCEMENTWorkoutFinale();
+                win_ano.Show();
             }
         }
 

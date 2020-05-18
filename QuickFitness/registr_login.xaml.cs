@@ -116,29 +116,12 @@ namespace QuickFitness
                 }
 
                 flag4 = false;
+               
                 switch (progress_bar_step)
                 {
+
                     case 1:
                         this.Progress_bar_registr.Value = 25;
-                        break;
-
-                    case 2:
-                        this.Progress_bar_registr.Value = 50;
-                        break;
-
-                    case 3:
-                        this.Progress_bar_registr.Value = 75;
-                        break;
-
-                    case 4:
-                        this.Progress_bar_registr.Value = 100;
-                        break;
-                }
-
-                switch (progress_bar_step)
-                {
-
-                    case 1:
                         this.Grid__regist_1.Visibility = Visibility.Visible;
                         this.Grid_regist_2.Visibility = Visibility.Hidden;
                         this.Grid_regist_3.Visibility = Visibility.Hidden;
@@ -147,6 +130,7 @@ namespace QuickFitness
                         break;
 
                     case 2:
+                        this.Progress_bar_registr.Value = 50;
                         this.Grid__regist_1.Visibility = Visibility.Hidden;
                         this.Grid_regist_2.Visibility = Visibility.Visible;
                         this.Grid_regist_3.Visibility = Visibility.Hidden;
@@ -155,19 +139,50 @@ namespace QuickFitness
                         break;
 
                     case 3:
-                        this.Grid__regist_1.Visibility = Visibility.Hidden;
-                        this.Grid_regist_2.Visibility = Visibility.Hidden;
-                        this.Grid_regist_3.Visibility = Visibility.Visible;
-                        this.noti.Visibility = Visibility.Hidden;
-                        progress_bar_step++;
+
+                        
+                        if (this.new_name.Text == "")
+                        {
+                            this.Progress_bar_registr.Value = 50;
+                            var win_er = new ERRORWin();
+                            win_er.ChooseError("ERRORDataEntry");
+                            win_er.Show();                            
+                        }
+                        else
+                        {
+                            this.Progress_bar_registr.Value = 75;
+                            this.Grid__regist_1.Visibility = Visibility.Hidden;
+                            this.Grid_regist_2.Visibility = Visibility.Hidden;
+                            this.Grid_regist_3.Visibility = Visibility.Visible;
+                            this.noti.Visibility = Visibility.Hidden;
+                            progress_bar_step++;
+                        }                           
                         break;
 
                     case 4:
-                        this.Grid__regist_1.Visibility = Visibility.Hidden;
-                        this.Grid_regist_2.Visibility = Visibility.Hidden;
-                        this.Grid_regist_3.Visibility = Visibility.Hidden;
-                        this.noti.Visibility = Visibility.Visible;
-                        progress_bar_step++;
+                        
+                        Regex reg = new Regex(@"^[0-9]*[,]?[0-9]+$");
+                        MatchCollection matches1 = reg.Matches(this.new_w_s.Text);
+                        MatchCollection matches2 = reg.Matches(this.new_w_g.Text);
+                        if (matches1.Count == 0 || matches2.Count == 0)
+                        {
+                            this.Progress_bar_registr.Value = 75;
+                            var win_er = new ERRORWin();
+                            win_er.ChooseError("ERRORDataEntry");
+                            win_er.Show();
+                            
+
+                        }
+                        else
+                        {
+                            this.Progress_bar_registr.Value = 100;
+                            this.Grid__regist_1.Visibility = Visibility.Hidden;
+                            this.Grid_regist_2.Visibility = Visibility.Hidden;
+                            this.Grid_regist_3.Visibility = Visibility.Hidden;
+                            this.noti.Visibility = Visibility.Visible;
+                            progress_bar_step++;
+                        }
+                        
                         break;
 
                     case 5:
@@ -183,6 +198,8 @@ namespace QuickFitness
                         }
                         break;
                 }
+
+                
             }
 
 

@@ -87,7 +87,6 @@ namespace QuickFitness
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Time_go();
-
         }
         int kl = 0;
         public void Time_go()
@@ -177,7 +176,7 @@ namespace QuickFitness
                     }
                     else
                     {
-                        this.Timer.Text = "0:" + (time_ex - increment).ToString();
+                        this.Timer.Text = "0:" + (time_ex - increment).ToString();                        
                     }
 
                 }
@@ -186,6 +185,7 @@ namespace QuickFitness
                     this.Do_panel.Visibility = Visibility.Hidden;
                     this.Rest_panel.Visibility = Visibility.Visible;
                     this.Timer_rest.Text = "0:" + (time_rest - increment).ToString();
+                    flag_min = false;
                 }
             }
         }

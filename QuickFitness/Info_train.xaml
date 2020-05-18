@@ -55,17 +55,16 @@
         <local:Week_block x:Name="Four_week" Margin="987,614,49,20" Height="180" Width="248"/>
         <TextBlock HorizontalAlignment="Left" Margin="45,549,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="28" Foreground="#FFCDCDCD" Width="30" Height="30" TextAlignment="Center"/>
         <Rectangle HorizontalAlignment="Left" Height="31" Margin="44,549,0,0" Stroke="#FFCDCDCD" VerticalAlignment="Top" Width="31" StrokeThickness="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="80,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART
-                   " FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
+        <TextBlock HorizontalAlignment="Left" Margin="80,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
         <TextBlock HorizontalAlignment="Left" Margin="361,549,0,0" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="28" Foreground="#FFCDCDCD" Width="30" Height="30" TextAlignment="Center"/>
         <Rectangle HorizontalAlignment="Left" Height="31" Margin="361,549,0,0" Stroke="#FFCDCDCD" VerticalAlignment="Top" Width="31" StrokeThickness="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="397,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART                    " FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
+        <TextBlock HorizontalAlignment="Left" Margin="397,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
         <TextBlock HorizontalAlignment="Left" Margin="681,549,0,0" Text="3" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="28" Foreground="#FFCDCDCD" Width="30" Height="30" TextAlignment="Center"/>
         <Rectangle HorizontalAlignment="Left" Height="31" Margin="681,549,0,0" Stroke="#FFCDCDCD" VerticalAlignment="Top" Width="31" StrokeThickness="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="717,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART                    " FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
+        <TextBlock HorizontalAlignment="Left" Margin="717,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
         <TextBlock HorizontalAlignment="Left" Margin="992,549,0,0" Text="4" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="28" Foreground="#FFCDCDCD" Width="30" Height="30" TextAlignment="Center"/>
         <Rectangle HorizontalAlignment="Left" Height="31" Margin="992,549,0,0" Stroke="#FFCDCDCD" VerticalAlignment="Top" Width="31" StrokeThickness="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1028,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART                    " FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1028,563,0,0" Text="неделя" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="NEXT ART" FontWeight="Bold" FontSize="19" Foreground="#FFCDCDCD"/>
 
 
 

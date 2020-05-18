@@ -17,8 +17,7 @@
         </Button>
         <Label Content="у вас нет созданных" HorizontalAlignment="Center" Height="42" VerticalAlignment="Top" Width="420" Foreground="White" FontFamily="NEXT ART" FontSize="32" FontWeight="Bold" Margin="0,185,0,0"/>
         <Label Content="тренировок" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="242" Foreground="White" FontFamily="NEXT ART" FontSize="32" FontWeight="Bold" Margin="0,227,0,0"/>
-        <Button Content="Создать" Width="278" Height="65" Style="{DynamicResource BorderlessButton_main}" Click="Button_create_train" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,43" FontFamily="NEXT ART
-                " FontWeight="Bold" Background="#FFDEDEDE" FontSize="24"/>
+        <Button Content="Создать" Width="278" Height="65" Style="{DynamicResource BorderlessButton_main}" Click="Button_create_train" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,43" FontFamily="NEXT ART" FontWeight="Bold" Background="#FFDEDEDE" FontSize="24"/>
 
     </Grid>
 </Window>

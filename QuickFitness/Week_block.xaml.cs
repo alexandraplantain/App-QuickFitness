@@ -28,7 +28,6 @@ namespace QuickFitness
             Fill_week();
         }
 
-
         private void Fill_week()
         {
             k = (k * 2) - 1;
@@ -83,15 +82,10 @@ namespace QuickFitness
 
             }
         }
+
         public Week_block()
         {
-            InitializeComponent();
-
-            
-
-
+            InitializeComponent();        
         }
-
-
     }
 }
